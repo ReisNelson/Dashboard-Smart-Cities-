@@ -36,5 +36,10 @@ namespace Dashboard_Smart_Cities_Final.UserControls
         {
 
         }
+
+        private void labelSemanaAtual_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

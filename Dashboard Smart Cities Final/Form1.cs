@@ -118,6 +118,12 @@ namespace Dashboard_Smart_Cities_Final
             ExibirUserControl(ucGastos);
         }
 
+        private void btnFechar_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+
         private void PanelHome_Paint(object sender, PaintEventArgs e) { }
         private void SataPanel1_Paint(object sender, PaintEventArgs e) { }
         private void Label1_Click(object sender, EventArgs e) { }

@@ -20,6 +20,9 @@
             base.Dispose(disposing);
         }
 
+        private System.Windows.Forms.Button btnFechar;
+
+
         #region Código gerado pelo Windows Form Designer
 
         /// <summary>
@@ -41,7 +44,10 @@
             this.btnInfo = new FrameworkTest.SATAButton();
             this.btnMenu = new FrameworkTest.SATAButton();
             this.panelContent = new System.Windows.Forms.Panel();
+            this.btnFechar = new System.Windows.Forms.Button();
+            this.sataButton1 = new FrameworkTest.SATAButton();
             this.panelSidebar.SuspendLayout();
+            this.panelContent.SuspendLayout();
             this.SuspendLayout();
             // 
             // sataEllipseControl1
@@ -59,6 +65,7 @@
             this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
             this.panelSidebar.Controls.Add(this.label1);
             this.panelSidebar.Controls.Add(this.btnGastos);
+            this.panelSidebar.Controls.Add(this.sataButton1);
             this.panelSidebar.Controls.Add(this.btnSeguranca);
             this.panelSidebar.Controls.Add(this.btnDashboard);
             this.panelSidebar.Controls.Add(this.btnConfig);
@@ -66,31 +73,31 @@
             this.panelSidebar.Controls.Add(this.btnMenu);
             this.panelSidebar.Location = new System.Drawing.Point(0, 0);
             this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Size = new System.Drawing.Size(199, 765);
+            this.panelSidebar.Size = new System.Drawing.Size(204, 765);
             this.panelSidebar.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
-            this.label1.Font = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.label1.Location = new System.Drawing.Point(48, 22);
+            this.label1.Location = new System.Drawing.Point(57, 22);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(102, 21);
+            this.label1.Size = new System.Drawing.Size(101, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Smart Cities";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
             // btnGastos
             // 
-            this.btnGastos.ButtonText = "Gastos";
+            this.btnGastos.ButtonText = "Ranking de Consumo";
             this.btnGastos.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
             this.btnGastos.CheckedForeColor = System.Drawing.Color.White;
             this.btnGastos.CheckedImageTint = System.Drawing.Color.White;
             this.btnGastos.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
             this.btnGastos.CustomDialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnGastos.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGastos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGastos.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
             this.btnGastos.HoverForeColor = System.Drawing.Color.White;
             this.btnGastos.HoverImage = null;
@@ -103,7 +110,7 @@
             this.btnGastos.ImageTint = System.Drawing.Color.White;
             this.btnGastos.IsToggleButton = false;
             this.btnGastos.IsToggled = false;
-            this.btnGastos.Location = new System.Drawing.Point(13, 158);
+            this.btnGastos.Location = new System.Drawing.Point(4, 158);
             this.btnGastos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnGastos.Name = "btnGastos";
             this.btnGastos.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -115,7 +122,7 @@
             this.btnGastos.PressedImageTint = System.Drawing.Color.White;
             this.btnGastos.PressedOutline = System.Drawing.Color.Empty;
             this.btnGastos.Rounding = new System.Windows.Forms.Padding(5);
-            this.btnGastos.Size = new System.Drawing.Size(161, 51);
+            this.btnGastos.Size = new System.Drawing.Size(196, 51);
             this.btnGastos.TabIndex = 2;
             this.btnGastos.TextAutoCenter = false;
             this.btnGastos.TextOffset = new System.Drawing.Point(15, 0);
@@ -123,13 +130,13 @@
             // 
             // btnSeguranca
             // 
-            this.btnSeguranca.ButtonText = "Segurança";
+            this.btnSeguranca.ButtonText = "Alertas e Notificações";
             this.btnSeguranca.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
             this.btnSeguranca.CheckedForeColor = System.Drawing.Color.White;
             this.btnSeguranca.CheckedImageTint = System.Drawing.Color.White;
             this.btnSeguranca.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
             this.btnSeguranca.CustomDialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnSeguranca.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSeguranca.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnSeguranca.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
             this.btnSeguranca.HoverForeColor = System.Drawing.Color.White;
             this.btnSeguranca.HoverImage = null;
@@ -142,7 +149,7 @@
             this.btnSeguranca.ImageTint = System.Drawing.Color.White;
             this.btnSeguranca.IsToggleButton = false;
             this.btnSeguranca.IsToggled = false;
-            this.btnSeguranca.Location = new System.Drawing.Point(13, 215);
+            this.btnSeguranca.Location = new System.Drawing.Point(4, 215);
             this.btnSeguranca.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnSeguranca.Name = "btnSeguranca";
             this.btnSeguranca.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -154,7 +161,7 @@
             this.btnSeguranca.PressedImageTint = System.Drawing.Color.White;
             this.btnSeguranca.PressedOutline = System.Drawing.Color.Empty;
             this.btnSeguranca.Rounding = new System.Windows.Forms.Padding(5);
-            this.btnSeguranca.Size = new System.Drawing.Size(161, 51);
+            this.btnSeguranca.Size = new System.Drawing.Size(196, 51);
             this.btnSeguranca.TabIndex = 2;
             this.btnSeguranca.TextAutoCenter = false;
             this.btnSeguranca.TextOffset = new System.Drawing.Point(15, 0);
@@ -162,14 +169,14 @@
             // 
             // btnDashboard
             // 
-            this.btnDashboard.ButtonText = "Dashboard";
+            this.btnDashboard.ButtonText = "Consumo de Energia";
             this.btnDashboard.CausesValidation = false;
             this.btnDashboard.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(19)))), ((int)(((byte)(40)))));
             this.btnDashboard.CheckedForeColor = System.Drawing.Color.White;
             this.btnDashboard.CheckedImageTint = System.Drawing.Color.White;
             this.btnDashboard.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(19)))), ((int)(((byte)(40)))));
             this.btnDashboard.CustomDialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnDashboard.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDashboard.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnDashboard.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
             this.btnDashboard.HoverForeColor = System.Drawing.Color.White;
             this.btnDashboard.HoverImage = null;
@@ -182,7 +189,7 @@
             this.btnDashboard.ImageTint = System.Drawing.Color.White;
             this.btnDashboard.IsToggleButton = false;
             this.btnDashboard.IsToggled = false;
-            this.btnDashboard.Location = new System.Drawing.Point(13, 101);
+            this.btnDashboard.Location = new System.Drawing.Point(4, 101);
             this.btnDashboard.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnDashboard.Name = "btnDashboard";
             this.btnDashboard.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -194,7 +201,7 @@
             this.btnDashboard.PressedImageTint = System.Drawing.Color.White;
             this.btnDashboard.PressedOutline = System.Drawing.Color.Empty;
             this.btnDashboard.Rounding = new System.Windows.Forms.Padding(5);
-            this.btnDashboard.Size = new System.Drawing.Size(161, 51);
+            this.btnDashboard.Size = new System.Drawing.Size(196, 51);
             this.btnDashboard.TabIndex = 2;
             this.btnDashboard.TextAutoCenter = false;
             this.btnDashboard.TextOffset = new System.Drawing.Point(15, 0);
@@ -208,7 +215,7 @@
             this.btnConfig.CheckedImageTint = System.Drawing.Color.White;
             this.btnConfig.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
             this.btnConfig.CustomDialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnConfig.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnConfig.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfig.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
             this.btnConfig.HoverForeColor = System.Drawing.Color.White;
             this.btnConfig.HoverImage = null;
@@ -221,7 +228,7 @@
             this.btnConfig.ImageTint = System.Drawing.Color.White;
             this.btnConfig.IsToggleButton = false;
             this.btnConfig.IsToggled = false;
-            this.btnConfig.Location = new System.Drawing.Point(13, 653);
+            this.btnConfig.Location = new System.Drawing.Point(4, 663);
             this.btnConfig.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -233,7 +240,7 @@
             this.btnConfig.PressedImageTint = System.Drawing.Color.White;
             this.btnConfig.PressedOutline = System.Drawing.Color.Empty;
             this.btnConfig.Rounding = new System.Windows.Forms.Padding(5);
-            this.btnConfig.Size = new System.Drawing.Size(161, 51);
+            this.btnConfig.Size = new System.Drawing.Size(196, 51);
             this.btnConfig.TabIndex = 2;
             this.btnConfig.TextAutoCenter = false;
             this.btnConfig.TextOffset = new System.Drawing.Point(15, 0);
@@ -247,7 +254,7 @@
             this.btnInfo.CheckedImageTint = System.Drawing.Color.White;
             this.btnInfo.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
             this.btnInfo.CustomDialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnInfo.Font = new System.Drawing.Font("Century Gothic", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInfo.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnInfo.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
             this.btnInfo.HoverForeColor = System.Drawing.Color.White;
             this.btnInfo.HoverImage = null;
@@ -260,7 +267,7 @@
             this.btnInfo.ImageTint = System.Drawing.Color.White;
             this.btnInfo.IsToggleButton = false;
             this.btnInfo.IsToggled = false;
-            this.btnInfo.Location = new System.Drawing.Point(13, 605);
+            this.btnInfo.Location = new System.Drawing.Point(4, 606);
             this.btnInfo.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.btnInfo.Name = "btnInfo";
             this.btnInfo.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
@@ -272,7 +279,7 @@
             this.btnInfo.PressedImageTint = System.Drawing.Color.White;
             this.btnInfo.PressedOutline = System.Drawing.Color.Empty;
             this.btnInfo.Rounding = new System.Windows.Forms.Padding(5);
-            this.btnInfo.Size = new System.Drawing.Size(161, 51);
+            this.btnInfo.Size = new System.Drawing.Size(196, 51);
             this.btnInfo.TabIndex = 2;
             this.btnInfo.TextAutoCenter = false;
             this.btnInfo.TextOffset = new System.Drawing.Point(15, 0);
@@ -321,12 +328,69 @@
             // 
             this.panelContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
             this.panelContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.panelContent.Controls.Add(this.btnFechar);
             this.panelContent.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelContent.Location = new System.Drawing.Point(199, 0);
+            this.panelContent.Location = new System.Drawing.Point(202, 0);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1166, 765);
+            this.panelContent.Size = new System.Drawing.Size(1163, 765);
             this.panelContent.TabIndex = 6;
             this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContent_Paint);
+            // 
+            // btnFechar
+            // 
+            this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnFechar.BackColor = System.Drawing.Color.Transparent;
+            this.btnFechar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
+            this.btnFechar.FlatAppearance.BorderSize = 0;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFechar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnFechar.ForeColor = System.Drawing.Color.White;
+            this.btnFechar.Location = new System.Drawing.Point(1117, 2);
+            this.btnFechar.Name = "btnFechar";
+            this.btnFechar.Size = new System.Drawing.Size(40, 30);
+            this.btnFechar.TabIndex = 0;
+            this.btnFechar.Text = "x";
+            this.btnFechar.UseVisualStyleBackColor = false;
+            this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
+            // 
+            // sataButton1
+            // 
+            this.sataButton1.ButtonText = "Metas e Progresso";
+            this.sataButton1.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
+            this.sataButton1.CheckedForeColor = System.Drawing.Color.White;
+            this.sataButton1.CheckedImageTint = System.Drawing.Color.White;
+            this.sataButton1.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
+            this.sataButton1.CustomDialogResult = System.Windows.Forms.DialogResult.None;
+            this.sataButton1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.sataButton1.HoverBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.sataButton1.HoverForeColor = System.Drawing.Color.White;
+            this.sataButton1.HoverImage = null;
+            this.sataButton1.HoverImageTint = System.Drawing.Color.White;
+            this.sataButton1.HoverOutline = System.Drawing.Color.Empty;
+            this.sataButton1.Image = ((System.Drawing.Image)(resources.GetObject("sataButton1.Image")));
+            this.sataButton1.ImageAutoCenter = false;
+            this.sataButton1.ImageExpand = new System.Drawing.Point(0, 0);
+            this.sataButton1.ImageOffset = new System.Drawing.Point(15, 0);
+            this.sataButton1.ImageTint = System.Drawing.Color.White;
+            this.sataButton1.IsToggleButton = false;
+            this.sataButton1.IsToggled = false;
+            this.sataButton1.Location = new System.Drawing.Point(4, 272);
+            this.sataButton1.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.sataButton1.Name = "sataButton1";
+            this.sataButton1.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(35)))), ((int)(((byte)(40)))), ((int)(((byte)(45)))));
+            this.sataButton1.NormalForeColor = System.Drawing.Color.White;
+            this.sataButton1.NormalOutline = System.Drawing.Color.Empty;
+            this.sataButton1.OutlineThickness = 2F;
+            this.sataButton1.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.sataButton1.PressedForeColor = System.Drawing.Color.White;
+            this.sataButton1.PressedImageTint = System.Drawing.Color.White;
+            this.sataButton1.PressedOutline = System.Drawing.Color.Empty;
+            this.sataButton1.Rounding = new System.Windows.Forms.Padding(5);
+            this.sataButton1.Size = new System.Drawing.Size(196, 51);
+            this.sataButton1.TabIndex = 2;
+            this.sataButton1.TextAutoCenter = false;
+            this.sataButton1.TextOffset = new System.Drawing.Point(15, 0);
+            this.sataButton1.Click += new System.EventHandler(this.BtnSeguranca_Click);
             // 
             // Form1
             // 
@@ -343,6 +407,7 @@
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panelSidebar.ResumeLayout(false);
             this.panelSidebar.PerformLayout();
+            this.panelContent.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -360,6 +425,7 @@
         private FrameworkTest.SATAButton btnInfo;
         private FrameworkTest.SATAButton btnMenu;
         private System.Windows.Forms.Panel panelContent;
+        private FrameworkTest.SATAButton sataButton1;
     }
 }
 
