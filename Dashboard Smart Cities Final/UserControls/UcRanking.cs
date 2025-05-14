@@ -10,11 +10,21 @@ using System.Windows.Forms;
 
 namespace Dashboard_Smart_Cities_Final.UserControls
 {
-    public partial class UcGastos : UserControl
+    public partial class UcRanking : UserControl
     {
-        public UcGastos()
+        public UcRanking()
         {
             InitializeComponent();
+        }
+
+        private void sataPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void UcRanking_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

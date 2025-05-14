@@ -64,11 +64,11 @@
     <Compile Include="UserControls\UcConfiguracoes.Designer.cs">
       <DependentUpon>UcConfiguracoes.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UcGastos.cs">
+    <Compile Include="UserControls\UcRanking.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserControls\UcGastos.Designer.cs">
-      <DependentUpon>UcGastos.cs</DependentUpon>
+    <Compile Include="UserControls\UcRanking.Designer.cs">
+      <DependentUpon>UcRanking.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UcHome.cs">
       <SubType>UserControl</SubType>
@@ -101,8 +101,8 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="UserControls\UcGastos.resx">
-      <DependentUpon>UcGastos.cs</DependentUpon>
+    <EmbeddedResource Include="UserControls\UcRanking.resx">
+      <DependentUpon>UcRanking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UcHome.resx">
       <DependentUpon>UcHome.cs</DependentUpon>

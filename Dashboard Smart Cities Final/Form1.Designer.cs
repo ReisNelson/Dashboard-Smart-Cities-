@@ -72,9 +72,9 @@
             this.panelSidebar.Controls.Add(this.btnInfo);
             this.panelSidebar.Controls.Add(this.btnMenu);
             this.panelSidebar.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.panelSidebar.Location = new System.Drawing.Point(0, 0);
+            this.panelSidebar.Location = new System.Drawing.Point(2, 3);
             this.panelSidebar.Name = "panelSidebar";
-            this.panelSidebar.Size = new System.Drawing.Size(222, 765);
+            this.panelSidebar.Size = new System.Drawing.Size(221, 779);
             this.panelSidebar.TabIndex = 4;
             this.panelSidebar.Paint += new System.Windows.Forms.PaintEventHandler(this.panelSidebar_Paint);
             // 
@@ -370,10 +370,9 @@
             this.panelContent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(33)))));
             this.panelContent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.panelContent.Controls.Add(this.btnFechar);
-            this.panelContent.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panelContent.Location = new System.Drawing.Point(220, 0);
+            this.panelContent.Location = new System.Drawing.Point(221, 0);
             this.panelContent.Name = "panelContent";
-            this.panelContent.Size = new System.Drawing.Size(1145, 749);
+            this.panelContent.Size = new System.Drawing.Size(1114, 779);
             this.panelContent.TabIndex = 6;
             this.panelContent.Paint += new System.Windows.Forms.PaintEventHandler(this.PanelContent_Paint);
             // 
@@ -381,12 +380,15 @@
             // 
             this.btnFechar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnFechar.BackColor = System.Drawing.Color.Transparent;
-            this.btnFechar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
+            this.btnFechar.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.btnFechar.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(33)))));
             this.btnFechar.FlatAppearance.BorderSize = 0;
-            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnFechar.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Transparent;
+            this.btnFechar.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
+            this.btnFechar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFechar.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFechar.ForeColor = System.Drawing.Color.White;
-            this.btnFechar.Location = new System.Drawing.Point(1099, 2);
+            this.btnFechar.Location = new System.Drawing.Point(1068, 2);
             this.btnFechar.Name = "btnFechar";
             this.btnFechar.Size = new System.Drawing.Size(40, 30);
             this.btnFechar.TabIndex = 0;
@@ -398,11 +400,12 @@
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
-            this.ClientSize = new System.Drawing.Size(1365, 749);
+            this.ClientSize = new System.Drawing.Size(1336, 780);
             this.Controls.Add(this.panelSidebar);
             this.Controls.Add(this.panelContent);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";

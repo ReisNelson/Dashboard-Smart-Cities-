@@ -7,7 +7,7 @@ namespace Dashboard_Smart_Cities_Final
 {
     public partial class Form1 : Form
     {
-        //SideBar
+        // Sidebar
         bool isSidebarExpanded = true;
         int sidebarMaxWidth = 220;
         int sidebarMinWidth = 60;
@@ -17,37 +17,41 @@ namespace Dashboard_Smart_Cities_Final
         private UcInformacoes ucInformacoes;
         private UcConfiguracoes ucConfiguracoes;
         private UcSeguranca ucSeguranca;
-        private UcGastos ucGastos;
+        private UcRanking ucGastos;
         private UserControl currentUc;
 
-      public Form1()
+        public Form1()
         {
             InitializeComponent();
+
             typeof(Panel).InvokeMember("DoubleBuffered",
                 System.Reflection.BindingFlags.SetProperty | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic,
                 null, panelContent, new object[] { true });
+
+            this.Resize += Form1_Resize;
 
             // Inicializa os UserControls
             ucDashboard = new UcHome();
             ucInformacoes = new UcInformacoes();
             ucConfiguracoes = new UcConfiguracoes();
             ucSeguranca = new UcSeguranca();
-            ucGastos = new UcGastos();
+            ucGastos = new UcRanking();
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            // Inicialmente sidebar aberta com texto
             panelSidebar.Width = sidebarMaxWidth;
+            AjustarPanelContent(); // Ajusta posição e largura ao iniciar
 
-            // Exibe o UserControl de Dashboard inicialmente
+            // Exibe o UserControl inicial
             ExibirUserControl(ucDashboard);
         }
 
         private void BtnMenu_Click(object sender, EventArgs e)
         {
-            sidebarTimer.Start(); // Inicia a animação
+            sidebarTimer.Start(); // Inicia animação
         }
+
         private void AtualizarTextosSidebar(bool mostrar)
         {
             btnDashboard.Text = mostrar ? "Dashboard" : "";
@@ -56,6 +60,7 @@ namespace Dashboard_Smart_Cities_Final
             btnSeguranca.Text = mostrar ? "Segurança" : "";
             btnGastos.Text = mostrar ? "Gastos" : "";
         }
+
         private void sidebarTimer_Tick(object sender, EventArgs e)
         {
             if (isSidebarExpanded)
@@ -80,19 +85,27 @@ namespace Dashboard_Smart_Cities_Final
                     AtualizarTextosSidebar(true);
                 }
             }
+
+            AjustarPanelContent(); // Reposiciona e redimensiona o painel de conteúdo a cada "tick"
         }
+
+        private void AjustarPanelContent()
+        {
+            panelContent.Left = panelSidebar.Right;
+            panelContent.Width = this.ClientSize.Width - panelContent.Left;
+        }
+
         private void ExibirUserControl(UserControl uc)
         {
             if (currentUc != null)
             {
                 panelContent.Controls.Remove(currentUc);
-               
             }
+
             uc.Dock = DockStyle.Fill;
             panelContent.Controls.Add(uc);
             currentUc = uc;
         }
-
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
@@ -124,16 +137,27 @@ namespace Dashboard_Smart_Cities_Final
             this.Close();
         }
 
+        private void Form1_Resize(object sender, EventArgs e)
+        {
+            // Renomeando o método para evitar ambiguidade  
+            AjustarPanelContentOnResize();
+        }
 
+        private void AjustarPanelContentOnResize()
+        {
+            int minContentWidth = 400; // Defina conforme o mínimo desejado para seu layout  
+            panelContent.Left = panelSidebar.Right;
+            int newWidth = this.ClientSize.Width - panelContent.Left;
+            panelContent.Width = Math.Max(newWidth, minContentWidth);
+            panelContent.Height = this.ClientSize.Height; // Garante altura total  
+        }
+
+        // Eventos não usados
         private void PanelHome_Paint(object sender, PaintEventArgs e) { }
         private void SataPanel1_Paint(object sender, PaintEventArgs e) { }
         private void Label1_Click(object sender, EventArgs e) { }
         private void UserControl1_Load(object sender, EventArgs e) { }
         private void PanelContent_Paint(object sender, PaintEventArgs e) { }
-
-        private void panelSidebar_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
+        private void panelSidebar_Paint(object sender, PaintEventArgs e) { }
     }
 }
