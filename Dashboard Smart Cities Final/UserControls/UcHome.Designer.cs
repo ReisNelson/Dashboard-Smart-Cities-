@@ -34,10 +34,7 @@ namespace Dashboard
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcHome));
             SATAUiFramework.BorderRadius borderRadius2 = new SATAUiFramework.BorderRadius();
             SATAUiFramework.BorderRadius borderRadius3 = new SATAUiFramework.BorderRadius();
-            FrameworkTest.Charts.SATALineChart.DataSet dataSet1 = new FrameworkTest.Charts.SATALineChart.DataSet();
-            FrameworkTest.Charts.SATALineChart.DataSet dataSet2 = new FrameworkTest.Charts.SATALineChart.DataSet();
-            FrameworkTest.Charts.SATALineChart.DataSet dataSet3 = new FrameworkTest.Charts.SATALineChart.DataSet();
-            FrameworkTest.Charts.SATALineChart.DataSet dataSet4 = new FrameworkTest.Charts.SATALineChart.DataSet();
+            this.sataGraficoBarra.Paint += new System.Windows.Forms.PaintEventHandler(this.sataGraficoBarra_Paint);
             this.sataPanelEconomia = new SATAUiFramework.SATAPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.teste = new SATAUiFramework.Controls.SATACircularProgress();
