@@ -121,10 +121,7 @@
     <value>17, 17</value>
   </metadata>
   <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>46</value>
-  </metadata>
-  <metadata name="sidebarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>171, 17</value>
+    <value>25</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="btnGastos.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -136,6 +133,15 @@
         RXr2KynSGjH2miIS5PM3MPBEG4iLTJJjx37DRWj0sFgvbjR/eEx1N53W3Nw8mjMWMbxobBXcldaiAjXU
         5q3C8+YiN9XPkuQ346N2zXSxJgfLuf+iXmSO8X2l+hJmwlPE47oys2Zosfa3U10Zt2PSeoz7N0+orow3
         GaG6MuLT8/5ye1VXxm7uT1REqwPHWsPL+AP4wQMm19gWmAAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="sataButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAN9JREFUSEvt
+        lNERgjAQRCnBEiyBUizBDqQESqAD7cQStAPpADp4TvBgwiYRRPjj/QCbm927kEmW7WwFUBPy0LrFAAfg
+        BNz8BK37m00DPHP37N61ZhKgAq7AUfTB3L7dds0PsD2+D7N/6ILU3Kuvxy4JgBx4AS1wFtOewfwnzLAx
+        81zW+qDK12cDFNbd042s69+w8IvqI6zrRaMDpetM9dVYHGBTFaor/wQ4StWVVQPsMDSiTQf05160WEBg
+        FtMCEmYxLTCLaQEJs5gWmMW0gMQWxTR3sY3uHfsvra/tzOINTQerhHPedE4AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnSeguranca.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
@@ -180,13 +186,7 @@
         YX8nhGvaPg/8M1wBVv9+G0fX11YAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="sataButton1.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAN9JREFUSEvt
-        lNERgjAQRCnBEiyBUizBDqQESqAD7cQStAPpADp4TvBgwiYRRPjj/QCbm927kEmW7WwFUBPy0LrFAAfg
-        BNz8BK37m00DPHP37N61ZhKgAq7AUfTB3L7dds0PsD2+D7N/6ILU3Kuvxy4JgBx4AS1wFtOewfwnzLAx
-        81zW+qDK12cDFNbd042s69+w8IvqI6zrRaMDpetM9dVYHGBTFaor/wQ4StWVVQPsMDSiTQf05160WEBg
-        FtMCEmYxLTCLaQEJs5gWmMW0gMQWxTR3sY3uHfsvra/tzOINTQerhHPedE4AAAAASUVORK5CYII=
-</value>
-  </data>
+  <metadata name="sidebarTimer.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>171, 17</value>
+  </metadata>
 </root>

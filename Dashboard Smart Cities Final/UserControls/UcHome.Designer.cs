@@ -1,4 +1,6 @@
-﻿namespace Dashboard_Smart_Cities_Final.UserControls
+﻿using System;
+
+namespace Dashboard
 {
     partial class UcHome
     {
@@ -31,37 +33,38 @@
             SATAUiFramework.BorderRadius borderRadius1 = new SATAUiFramework.BorderRadius();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(UcHome));
             SATAUiFramework.BorderRadius borderRadius2 = new SATAUiFramework.BorderRadius();
+            SATAUiFramework.BorderRadius borderRadius3 = new SATAUiFramework.BorderRadius();
+            FrameworkTest.Charts.SATALineChart.DataSet dataSet1 = new FrameworkTest.Charts.SATALineChart.DataSet();
+            FrameworkTest.Charts.SATALineChart.DataSet dataSet2 = new FrameworkTest.Charts.SATALineChart.DataSet();
+            FrameworkTest.Charts.SATALineChart.DataSet dataSet3 = new FrameworkTest.Charts.SATALineChart.DataSet();
+            FrameworkTest.Charts.SATALineChart.DataSet dataSet4 = new FrameworkTest.Charts.SATALineChart.DataSet();
             this.sataPanelEconomia = new SATAUiFramework.SATAPanel();
+            this.label4 = new System.Windows.Forms.Label();
+            this.teste = new SATAUiFramework.Controls.SATACircularProgress();
             this.pictureBoxGraph = new System.Windows.Forms.PictureBox();
-            this.labelSemanaAtual = new System.Windows.Forms.Label();
-            this.labelEconomizadoAtual = new System.Windows.Forms.Label();
-            this.labelgastoAtual = new System.Windows.Forms.Label();
-            this.sataPanelGasto = new SATAUiFramework.SATAPanel();
-            this.labelGastoAnterior = new System.Windows.Forms.Label();
-            this.pictureBoxDegraph = new System.Windows.Forms.PictureBox();
-            this.labelSemana = new System.Windows.Forms.Label();
-            this.labelGastoPassado = new System.Windows.Forms.Label();
-            this.panelPesquisaUc = new System.Windows.Forms.Panel();
-            this.labelRegistrar = new System.Windows.Forms.Label();
-            this.labelOu = new System.Windows.Forms.Label();
-            this.labelLogin = new System.Windows.Forms.Label();
-            this.pictureAccount = new System.Windows.Forms.PictureBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.sataSearchBox = new SATATextBox();
-            this.labelGeral = new System.Windows.Forms.Label();
+            this.sataPanel1 = new SATAUiFramework.SATAPanel();
+            this.label1 = new System.Windows.Forms.Label();
             this.sataCircularProgress1 = new SATAUiFramework.Controls.SATACircularProgress();
-            this.sataCircularProgress2 = new SATAUiFramework.Controls.SATACircularProgress();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.labelGastoAnt = new System.Windows.Forms.Label();
+            this.sataPanel3 = new SATAUiFramework.SATAPanel();
+            this.sataGraficoBarra = new FrameworkTest.Charts.SATALineChart();
+            this.sataEllipseControl1 = new SATAUiFramework.Controls.SATAEllipseControl();
             this.sataPanelEconomia.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGraph)).BeginInit();
-            this.sataPanelGasto.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDegraph)).BeginInit();
-            this.panelPesquisaUc.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureAccount)).BeginInit();
+            this.sataPanel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.sataPanel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // sataPanelEconomia
             // 
-            this.sataPanelEconomia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.sataPanelEconomia.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
+            this.sataPanelEconomia.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.sataPanelEconomia.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
             this.sataPanelEconomia.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(41)))));
             borderRadius1.BottomLeft = 20;
             borderRadius1.BottomRight = 20;
@@ -69,181 +72,79 @@
             borderRadius1.TopRight = 20;
             this.sataPanelEconomia.BorderRadius = borderRadius1;
             this.sataPanelEconomia.BorderThickness = 0;
+            this.sataPanelEconomia.Controls.Add(this.label4);
+            this.sataPanelEconomia.Controls.Add(this.teste);
             this.sataPanelEconomia.Controls.Add(this.pictureBoxGraph);
-            this.sataPanelEconomia.Controls.Add(this.labelSemanaAtual);
-            this.sataPanelEconomia.Controls.Add(this.labelEconomizadoAtual);
-            this.sataPanelEconomia.Controls.Add(this.labelgastoAtual);
+            this.sataPanelEconomia.Controls.Add(this.label5);
+            this.sataPanelEconomia.Controls.Add(this.label3);
             this.sataPanelEconomia.Location = new System.Drawing.Point(94, 122);
             this.sataPanelEconomia.Name = "sataPanelEconomia";
-            this.sataPanelEconomia.Size = new System.Drawing.Size(320, 200);
+            this.sataPanelEconomia.Size = new System.Drawing.Size(325, 223);
             this.sataPanelEconomia.TabIndex = 4;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label4.Location = new System.Drawing.Point(42, 179);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(153, 21);
+            this.label4.TabIndex = 11;
+            this.label4.Text = "15% economizado";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
+            // 
+            // teste
+            // 
+            this.teste.AnimationSpeed = 5;
+            this.teste.FilledColor = System.Drawing.Color.LightBlue;
+            this.teste.FilledColorAlpha = 130;
+            this.teste.FilledThickness = 15;
+            this.teste.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.teste.IsAnimated = true;
+            this.teste.Location = new System.Drawing.Point(18, 43);
+            this.teste.Name = "teste";
+            this.teste.Percentage = 30;
+            this.teste.ShowText = true;
+            this.teste.Size = new System.Drawing.Size(105, 106);
+            this.teste.TabIndex = 11;
+            this.teste.TextColor = System.Drawing.Color.White;
+            this.teste.TextSize = 20;
+            this.teste.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
+            this.teste.UnfilledThickness = 15;
+            this.teste.Click += new System.EventHandler(this.sataBarraEconomia_Click);
             // 
             // pictureBoxGraph
             // 
             this.pictureBoxGraph.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxGraph.Image")));
-            this.pictureBoxGraph.Location = new System.Drawing.Point(232, 118);
+            this.pictureBoxGraph.Location = new System.Drawing.Point(241, 148);
             this.pictureBoxGraph.Name = "pictureBoxGraph";
-            this.pictureBoxGraph.Size = new System.Drawing.Size(39, 43);
+            this.pictureBoxGraph.Size = new System.Drawing.Size(54, 52);
             this.pictureBoxGraph.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pictureBoxGraph.TabIndex = 6;
             this.pictureBoxGraph.TabStop = false;
             // 
-            // labelSemanaAtual
+            // label5
             // 
-            this.labelSemanaAtual.AutoSize = true;
-            this.labelSemanaAtual.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSemanaAtual.ForeColor = System.Drawing.Color.White;
-            this.labelSemanaAtual.Location = new System.Drawing.Point(199, 12);
-            this.labelSemanaAtual.Name = "labelSemanaAtual";
-            this.labelSemanaAtual.Size = new System.Drawing.Size(72, 13);
-            this.labelSemanaAtual.TabIndex = 6;
-            this.labelSemanaAtual.Text = "Essa semana";
-            this.labelSemanaAtual.Click += new System.EventHandler(this.labelSemanaAtual_Click);
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.label5.Location = new System.Drawing.Point(148, 110);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(85, 17);
+            this.label5.TabIndex = 6;
+            this.label5.Text = "Essa semana";
+            this.label5.Click += new System.EventHandler(this.labelSemanaAtual_Click);
             // 
-            // labelEconomizadoAtual
+            // label3
             // 
-            this.labelEconomizadoAtual.AutoSize = true;
-            this.labelEconomizadoAtual.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelEconomizadoAtual.ForeColor = System.Drawing.Color.LimeGreen;
-            this.labelEconomizadoAtual.Location = new System.Drawing.Point(123, 70);
-            this.labelEconomizadoAtual.Name = "labelEconomizadoAtual";
-            this.labelEconomizadoAtual.Size = new System.Drawing.Size(102, 13);
-            this.labelEconomizadoAtual.TabIndex = 5;
-            this.labelEconomizadoAtual.Text = "15% economizado";
-            // 
-            // labelgastoAtual
-            // 
-            this.labelgastoAtual.AutoSize = true;
-            this.labelgastoAtual.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelgastoAtual.ForeColor = System.Drawing.Color.White;
-            this.labelgastoAtual.Location = new System.Drawing.Point(124, 31);
-            this.labelgastoAtual.Name = "labelgastoAtual";
-            this.labelgastoAtual.Size = new System.Drawing.Size(97, 30);
-            this.labelgastoAtual.TabIndex = 5;
-            this.labelgastoAtual.Text = "192KWh";
-            // 
-            // sataPanelGasto
-            // 
-            this.sataPanelGasto.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.sataPanelGasto.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(23)))), ((int)(((byte)(42)))));
-            this.sataPanelGasto.BorderColor = System.Drawing.Color.Black;
-            borderRadius2.BottomLeft = 15;
-            borderRadius2.BottomRight = 15;
-            borderRadius2.TopLeft = 15;
-            borderRadius2.TopRight = 15;
-            this.sataPanelGasto.BorderRadius = borderRadius2;
-            this.sataPanelGasto.BorderThickness = 0;
-            this.sataPanelGasto.Controls.Add(this.labelGastoAnterior);
-            this.sataPanelGasto.Controls.Add(this.pictureBoxDegraph);
-            this.sataPanelGasto.Controls.Add(this.labelSemana);
-            this.sataPanelGasto.Controls.Add(this.labelGastoPassado);
-            this.sataPanelGasto.Location = new System.Drawing.Point(694, 122);
-            this.sataPanelGasto.Name = "sataPanelGasto";
-            this.sataPanelGasto.Size = new System.Drawing.Size(389, 116);
-            this.sataPanelGasto.TabIndex = 7;
-            // 
-            // labelGastoAnterior
-            // 
-            this.labelGastoAnterior.AutoSize = true;
-            this.labelGastoAnterior.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGastoAnterior.ForeColor = System.Drawing.Color.Crimson;
-            this.labelGastoAnterior.Location = new System.Drawing.Point(134, 70);
-            this.labelGastoAnterior.Name = "labelGastoAnterior";
-            this.labelGastoAnterior.Size = new System.Drawing.Size(82, 13);
-            this.labelGastoAnterior.TabIndex = 7;
-            this.labelGastoAnterior.Text = "22%+ gastado";
-            // 
-            // pictureBoxDegraph
-            // 
-            this.pictureBoxDegraph.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxDegraph.Image")));
-            this.pictureBoxDegraph.Location = new System.Drawing.Point(311, 42);
-            this.pictureBoxDegraph.Name = "pictureBoxDegraph";
-            this.pictureBoxDegraph.Size = new System.Drawing.Size(39, 43);
-            this.pictureBoxDegraph.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBoxDegraph.TabIndex = 7;
-            this.pictureBoxDegraph.TabStop = false;
-            // 
-            // labelSemana
-            // 
-            this.labelSemana.AutoSize = true;
-            this.labelSemana.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelSemana.ForeColor = System.Drawing.Color.White;
-            this.labelSemana.Location = new System.Drawing.Point(283, 12);
-            this.labelSemana.Name = "labelSemana";
-            this.labelSemana.Size = new System.Drawing.Size(93, 13);
-            this.labelSemana.TabIndex = 7;
-            this.labelSemana.Text = "Semana passada";
-            // 
-            // labelGastoPassado
-            // 
-            this.labelGastoPassado.AutoSize = true;
-            this.labelGastoPassado.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGastoPassado.ForeColor = System.Drawing.Color.White;
-            this.labelGastoPassado.Location = new System.Drawing.Point(132, 31);
-            this.labelGastoPassado.Name = "labelGastoPassado";
-            this.labelGastoPassado.Size = new System.Drawing.Size(85, 30);
-            this.labelGastoPassado.TabIndex = 7;
-            this.labelGastoPassado.Text = "76KWh";
-            // 
-            // panelPesquisaUc
-            // 
-            this.panelPesquisaUc.Controls.Add(this.labelRegistrar);
-            this.panelPesquisaUc.Controls.Add(this.labelOu);
-            this.panelPesquisaUc.Controls.Add(this.labelLogin);
-            this.panelPesquisaUc.Controls.Add(this.pictureAccount);
-            this.panelPesquisaUc.Controls.Add(this.sataSearchBox);
-            this.panelPesquisaUc.Controls.Add(this.labelGeral);
-            this.panelPesquisaUc.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panelPesquisaUc.Location = new System.Drawing.Point(0, 0);
-            this.panelPesquisaUc.Name = "panelPesquisaUc";
-            this.panelPesquisaUc.Size = new System.Drawing.Size(1313, 94);
-            this.panelPesquisaUc.TabIndex = 9;
-            // 
-            // labelRegistrar
-            // 
-            this.labelRegistrar.AutoSize = true;
-            this.labelRegistrar.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelRegistrar.ForeColor = System.Drawing.Color.White;
-            this.labelRegistrar.Location = new System.Drawing.Point(1007, 44);
-            this.labelRegistrar.Name = "labelRegistrar";
-            this.labelRegistrar.Size = new System.Drawing.Size(53, 13);
-            this.labelRegistrar.TabIndex = 4;
-            this.labelRegistrar.Text = "Registrar";
-            this.labelRegistrar.Click += new System.EventHandler(this.labelRegistrar_Click);
-            // 
-            // labelOu
-            // 
-            this.labelOu.AutoSize = true;
-            this.labelOu.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelOu.ForeColor = System.Drawing.Color.White;
-            this.labelOu.Location = new System.Drawing.Point(1050, 30);
-            this.labelOu.Name = "labelOu";
-            this.labelOu.Size = new System.Drawing.Size(21, 13);
-            this.labelOu.TabIndex = 4;
-            this.labelOu.Text = "ou";
-            // 
-            // labelLogin
-            // 
-            this.labelLogin.AutoSize = true;
-            this.labelLogin.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelLogin.ForeColor = System.Drawing.Color.White;
-            this.labelLogin.Location = new System.Drawing.Point(1007, 30);
-            this.labelLogin.Name = "labelLogin";
-            this.labelLogin.Size = new System.Drawing.Size(37, 13);
-            this.labelLogin.TabIndex = 4;
-            this.labelLogin.Text = "Login";
-            this.labelLogin.Click += new System.EventHandler(this.labelLogin_Click);
-            // 
-            // pictureAccount
-            // 
-            this.pictureAccount.Image = ((System.Drawing.Image)(resources.GetObject("pictureAccount.Image")));
-            this.pictureAccount.Location = new System.Drawing.Point(1092, 30);
-            this.pictureAccount.Name = "pictureAccount";
-            this.pictureAccount.Size = new System.Drawing.Size(28, 27);
-            this.pictureAccount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureAccount.TabIndex = 3;
-            this.pictureAccount.TabStop = false;
-            this.pictureAccount.Click += new System.EventHandler(this.pictureAccount_Click);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(140, 58);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(155, 42);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "192 kWh";
             // 
             // sataSearchBox
             // 
@@ -255,7 +156,7 @@
             this.sataSearchBox.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sataSearchBox.Icon = ((System.Drawing.Image)(resources.GetObject("sataSearchBox.Icon")));
             this.sataSearchBox.IconSize = new System.Drawing.Size(20, 20);
-            this.sataSearchBox.Location = new System.Drawing.Point(737, 27);
+            this.sataSearchBox.Location = new System.Drawing.Point(723, 25);
             this.sataSearchBox.Multiline = false;
             this.sataSearchBox.Name = "sataSearchBox";
             this.sataSearchBox.PasswordChar = false;
@@ -265,66 +166,193 @@
             this.sataSearchBox.TabIndex = 2;
             this.sataSearchBox.Texts = "";
             this.sataSearchBox.UnderlinedStyle = false;
+            this.sataSearchBox.Click += new System.EventHandler(this.sataSearchBox_Click);
             // 
-            // labelGeral
+            // sataPanel1
             // 
-            this.labelGeral.AutoSize = true;
-            this.labelGeral.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGeral.ForeColor = System.Drawing.Color.White;
-            this.labelGeral.Location = new System.Drawing.Point(29, 27);
-            this.labelGeral.Name = "labelGeral";
-            this.labelGeral.Size = new System.Drawing.Size(64, 30);
-            this.labelGeral.TabIndex = 1;
-            this.labelGeral.Text = "Geral";
+            this.sataPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.sataPanel1.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.sataPanel1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(30)))), ((int)(((byte)(41)))));
+            borderRadius2.BottomLeft = 20;
+            borderRadius2.BottomRight = 20;
+            borderRadius2.TopLeft = 20;
+            borderRadius2.TopRight = 20;
+            this.sataPanel1.BorderRadius = borderRadius2;
+            this.sataPanel1.BorderThickness = 0;
+            this.sataPanel1.Controls.Add(this.label1);
+            this.sataPanel1.Controls.Add(this.sataCircularProgress1);
+            this.sataPanel1.Controls.Add(this.pictureBox1);
+            this.sataPanel1.Controls.Add(this.label2);
+            this.sataPanel1.Controls.Add(this.labelGastoAnt);
+            this.sataPanel1.Location = new System.Drawing.Point(446, 122);
+            this.sataPanel1.Name = "sataPanel1";
+            this.sataPanel1.Size = new System.Drawing.Size(326, 223);
+            this.sataPanel1.TabIndex = 4;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI Emoji", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label1.Location = new System.Drawing.Point(42, 179);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(153, 21);
+            this.label1.TabIndex = 11;
+            this.label1.Text = "15% economizado";
+            this.label1.Click += new System.EventHandler(this.label4_Click);
             // 
             // sataCircularProgress1
             // 
-            this.sataCircularProgress1.AnimationSpeed = 3;
-            this.sataCircularProgress1.BackColor = System.Drawing.Color.RoyalBlue;
-            this.sataCircularProgress1.FilledColor = System.Drawing.Color.DeepSkyBlue;
+            this.sataCircularProgress1.AnimationSpeed = 5;
+            this.sataCircularProgress1.FilledColor = System.Drawing.Color.LightBlue;
             this.sataCircularProgress1.FilledColorAlpha = 130;
-            this.sataCircularProgress1.FilledThickness = 40;
+            this.sataCircularProgress1.FilledThickness = 15;
             this.sataCircularProgress1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.sataCircularProgress1.IsAnimated = true;
-            this.sataCircularProgress1.Location = new System.Drawing.Point(316, 358);
+            this.sataCircularProgress1.Location = new System.Drawing.Point(18, 43);
             this.sataCircularProgress1.Name = "sataCircularProgress1";
-            this.sataCircularProgress1.Percentage = 15;
+            this.sataCircularProgress1.Percentage = 17;
             this.sataCircularProgress1.ShowText = true;
-            this.sataCircularProgress1.Size = new System.Drawing.Size(82, 75);
-            this.sataCircularProgress1.TabIndex = 10;
+            this.sataCircularProgress1.Size = new System.Drawing.Size(105, 106);
+            this.sataCircularProgress1.TabIndex = 11;
             this.sataCircularProgress1.TextColor = System.Drawing.Color.White;
-            this.sataCircularProgress1.TextSize = 15;
-            this.sataCircularProgress1.UnFilledColor = System.Drawing.Color.MidnightBlue;
-            this.sataCircularProgress1.UnfilledThickness = 24;
+            this.sataCircularProgress1.TextSize = 20;
+            this.sataCircularProgress1.UnFilledColor = System.Drawing.Color.Crimson;
+            this.sataCircularProgress1.UnfilledThickness = 15;
+            this.sataCircularProgress1.Click += new System.EventHandler(this.sataBarraEconomia_Click);
             // 
-            // sataCircularProgress2
+            // pictureBox1
             // 
-            this.sataCircularProgress2.AnimationSpeed = 3;
-            this.sataCircularProgress2.BackColor = System.Drawing.Color.Crimson;
-            this.sataCircularProgress2.FilledColor = System.Drawing.Color.OrangeRed;
-            this.sataCircularProgress2.FilledColorAlpha = 130;
-            this.sataCircularProgress2.FilledThickness = 40;
-            this.sataCircularProgress2.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sataCircularProgress2.IsAnimated = true;
-            this.sataCircularProgress2.Location = new System.Drawing.Point(649, 323);
-            this.sataCircularProgress2.Name = "sataCircularProgress2";
-            this.sataCircularProgress2.Percentage = 22;
-            this.sataCircularProgress2.ShowText = true;
-            this.sataCircularProgress2.Size = new System.Drawing.Size(82, 75);
-            this.sataCircularProgress2.TabIndex = 10;
-            this.sataCircularProgress2.TextColor = System.Drawing.Color.White;
-            this.sataCircularProgress2.TextSize = 15;
-            this.sataCircularProgress2.UnFilledColor = System.Drawing.Color.DarkRed;
-            this.sataCircularProgress2.UnfilledThickness = 24;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(247, 148);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(54, 52);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
+            this.label2.Location = new System.Drawing.Point(151, 110);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(85, 17);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Essa semana";
+            this.label2.Click += new System.EventHandler(this.labelSemanaAtual_Click);
+            // 
+            // labelGastoAnt
+            // 
+            this.labelGastoAnt.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelGastoAnt.ForeColor = System.Drawing.Color.White;
+            this.labelGastoAnt.Location = new System.Drawing.Point(146, 58);
+            this.labelGastoAnt.Name = "labelGastoAnt";
+            this.labelGastoAnt.Size = new System.Drawing.Size(155, 42);
+            this.labelGastoAnt.TabIndex = 5;
+            this.labelGastoAnt.Text = "47 kWh";
+            this.labelGastoAnt.Click += new System.EventHandler(this.labelGastoAnt_Click);
+            // 
+            // sataPanel3
+            // 
+            this.sataPanel3.BackColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
+            this.sataPanel3.BorderColor = System.Drawing.Color.Black;
+            borderRadius3.BottomLeft = 10;
+            borderRadius3.BottomRight = 10;
+            borderRadius3.TopLeft = 10;
+            borderRadius3.TopRight = 10;
+            this.sataPanel3.BorderRadius = borderRadius3;
+            this.sataPanel3.BorderThickness = 0;
+            this.sataPanel3.Controls.Add(this.sataSearchBox);
+            this.sataPanel3.Location = new System.Drawing.Point(0, 0);
+            this.sataPanel3.Name = "sataPanel3";
+            this.sataPanel3.Size = new System.Drawing.Size(1313, 76);
+            this.sataPanel3.TabIndex = 11;
+            // 
+            // sataGraficoBarra
+            // 
+            this.sataGraficoBarra.AutoMaxValue = false;
+            this.sataGraficoBarra.AxisColor = System.Drawing.Color.Gray;
+            this.sataGraficoBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.sataGraficoBarra.ChartPadding = 40;
+            this.sataGraficoBarra.CustomXAxis = new string[0];
+            dataSet1.Label = "Gastou";
+            dataSet1.LineColor = System.Drawing.Color.RoyalBlue;
+            dataSet1.PointColor = System.Drawing.Color.Coral;
+            dataSet1.Points = new float[] {
+        105F,
+        65F,
+        80F,
+        120F,
+        135F,
+        65F,
+        30F};
+            dataSet2.Label = "Economizou";
+            dataSet2.LineColor = System.Drawing.Color.Firebrick;
+            dataSet2.PointColor = System.Drawing.Color.SpringGreen;
+            dataSet2.Points = new float[] {
+        80F,
+        90F,
+        70F,
+        100F,
+        110F,
+        50F,
+        40F};
+            dataSet3.Label = "Sample Dataset 1";
+            dataSet3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
+            dataSet3.PointColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
+            dataSet3.Points = new float[] {
+        105F,
+        65F,
+        80F,
+        120F,
+        135F,
+        65F,
+        30F};
+            dataSet4.Label = "Sample Dataset 2";
+            dataSet4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(1)))));
+            dataSet4.PointColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(1)))));
+            dataSet4.Points = new float[] {
+        80F,
+        90F,
+        70F,
+        100F,
+        110F,
+        50F,
+        40F};
+            this.sataGraficoBarra.DataSets.Add(dataSet1);
+            this.sataGraficoBarra.DataSets.Add(dataSet2);
+            this.sataGraficoBarra.DataSets.Add(dataSet3);
+            this.sataGraficoBarra.DataSets.Add(dataSet4);
+            this.sataGraficoBarra.DayColor = System.Drawing.Color.DarkGray;
+            this.sataGraficoBarra.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.sataGraficoBarra.ForeColor = System.Drawing.Color.White;
+            this.sataGraficoBarra.GradientBackground = true;
+            this.sataGraficoBarra.GridColor = System.Drawing.Color.LightGray;
+            this.sataGraficoBarra.Location = new System.Drawing.Point(94, 366);
+            this.sataGraficoBarra.Margin = new System.Windows.Forms.Padding(4);
+            this.sataGraficoBarra.MaxValue = 200F;
+            this.sataGraficoBarra.Name = "sataGraficoBarra";
+            this.sataGraficoBarra.ShortDates = true;
+            this.sataGraficoBarra.Size = new System.Drawing.Size(1168, 367);
+            this.sataGraficoBarra.TabIndex = 13;
+            this.sataGraficoBarra.UseBezier = true;
+            this.sataGraficoBarra.UsePercent = false;
+            this.sataGraficoBarra.Load += new System.EventHandler(this.sataGraficoBarra_Load);
+            // 
+            // sataEllipseControl1
+            // 
+            this.sataEllipseControl1.CornerRadius = 45;
+            this.sataEllipseControl1.TargetControl = this.sataGraficoBarra;
             // 
             // UcHome
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
-            this.Controls.Add(this.sataCircularProgress1);
-            this.Controls.Add(this.sataCircularProgress2);
-            this.Controls.Add(this.panelPesquisaUc);
-            this.Controls.Add(this.sataPanelGasto);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(33)))));
+            this.Controls.Add(this.sataGraficoBarra);
+            this.Controls.Add(this.sataPanel3);
+            this.Controls.Add(this.sataPanel1);
             this.Controls.Add(this.sataPanelEconomia);
             this.Name = "UcHome";
             this.Size = new System.Drawing.Size(1313, 765);
@@ -332,36 +360,36 @@
             this.sataPanelEconomia.ResumeLayout(false);
             this.sataPanelEconomia.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxGraph)).EndInit();
-            this.sataPanelGasto.ResumeLayout(false);
-            this.sataPanelGasto.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxDegraph)).EndInit();
-            this.panelPesquisaUc.ResumeLayout(false);
-            this.panelPesquisaUc.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureAccount)).EndInit();
+            this.sataPanel1.ResumeLayout(false);
+            this.sataPanel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.sataPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
+        }
+
+        private void chartConsumo_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
 
         private SATAUiFramework.SATAPanel sataPanelEconomia;
         private System.Windows.Forms.PictureBox pictureBoxGraph;
-        private System.Windows.Forms.Label labelSemanaAtual;
-        private System.Windows.Forms.Label labelEconomizadoAtual;
-        private System.Windows.Forms.Label labelgastoAtual;
-        private SATAUiFramework.SATAPanel sataPanelGasto;
-        private System.Windows.Forms.Label labelGastoAnterior;
-        private System.Windows.Forms.PictureBox pictureBoxDegraph;
-        private System.Windows.Forms.Label labelSemana;
-        private System.Windows.Forms.Label labelGastoPassado;
-        private System.Windows.Forms.Panel panelPesquisaUc;
-        private System.Windows.Forms.Label labelRegistrar;
-        private System.Windows.Forms.Label labelOu;
-        private System.Windows.Forms.Label labelLogin;
-        private System.Windows.Forms.PictureBox pictureAccount;
         private SATATextBox sataSearchBox;
-        private System.Windows.Forms.Label labelGeral;
+        private SATAUiFramework.Controls.SATACircularProgress teste;
+        private System.Windows.Forms.Label label4;
+        private SATAUiFramework.SATAPanel sataPanel1;
+        private System.Windows.Forms.Label label1;
         private SATAUiFramework.Controls.SATACircularProgress sataCircularProgress1;
-        private SATAUiFramework.Controls.SATACircularProgress sataCircularProgress2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelGastoAnt;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label3;
+        private SATAUiFramework.SATAPanel sataPanel3;
+        private FrameworkTest.Charts.SATALineChart sataGraficoBarra;
+        private SATAUiFramework.Controls.SATAEllipseControl sataEllipseControl1;
     }
 }

@@ -1,4 +1,5 @@
-﻿using Dashboard_Smart_Cities_Final.UserControls;
+﻿using Dashboard;
+using Dashboard_Smart_Cities_Final.UserControls;
 using System;
 using System.Windows.Forms;
 
@@ -8,7 +9,7 @@ namespace Dashboard_Smart_Cities_Final
     {
         //SideBar
         bool isSidebarExpanded = true;
-        int sidebarMaxWidth = 200;
+        int sidebarMaxWidth = 220;
         int sidebarMinWidth = 60;
 
         // UserControls
@@ -129,5 +130,10 @@ namespace Dashboard_Smart_Cities_Final
         private void Label1_Click(object sender, EventArgs e) { }
         private void UserControl1_Load(object sender, EventArgs e) { }
         private void PanelContent_Paint(object sender, PaintEventArgs e) { }
+
+        private void panelSidebar_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
