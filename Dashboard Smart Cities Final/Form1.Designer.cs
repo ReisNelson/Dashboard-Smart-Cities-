@@ -46,6 +46,7 @@
             this.btnMenu = new FrameworkTest.SATAButton();
             this.panelContent = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.Button();
+            this.btnComodos = new FrameworkTest.SATAButton();
             this.panelSidebar.SuspendLayout();
             this.panelContent.SuspendLayout();
             this.SuspendLayout();
@@ -65,6 +66,7 @@
             this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
             this.panelSidebar.Controls.Add(this.label1);
             this.panelSidebar.Controls.Add(this.btnGastos);
+            this.panelSidebar.Controls.Add(this.btnComodos);
             this.panelSidebar.Controls.Add(this.sataButton1);
             this.panelSidebar.Controls.Add(this.btnSeguranca);
             this.panelSidebar.Controls.Add(this.btnDashboard);
@@ -396,6 +398,45 @@
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
+            // btnComodos
+            // 
+            this.btnComodos.ButtonText = "Cômodos";
+            this.btnComodos.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
+            this.btnComodos.CheckedForeColor = System.Drawing.Color.White;
+            this.btnComodos.CheckedImageTint = System.Drawing.Color.White;
+            this.btnComodos.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
+            this.btnComodos.CustomDialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnComodos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComodos.HoverBackground = System.Drawing.Color.OldLace;
+            this.btnComodos.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.btnComodos.HoverImage = null;
+            this.btnComodos.HoverImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.btnComodos.HoverOutline = System.Drawing.Color.Empty;
+            this.btnComodos.Image = ((System.Drawing.Image)(resources.GetObject("btnComodos.Image")));
+            this.btnComodos.ImageAutoCenter = false;
+            this.btnComodos.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btnComodos.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnComodos.ImageTint = System.Drawing.Color.White;
+            this.btnComodos.IsToggleButton = false;
+            this.btnComodos.IsToggled = false;
+            this.btnComodos.Location = new System.Drawing.Point(5, 329);
+            this.btnComodos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnComodos.Name = "btnComodos";
+            this.btnComodos.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.btnComodos.NormalForeColor = System.Drawing.Color.White;
+            this.btnComodos.NormalOutline = System.Drawing.Color.Empty;
+            this.btnComodos.OutlineThickness = 2F;
+            this.btnComodos.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.btnComodos.PressedForeColor = System.Drawing.Color.White;
+            this.btnComodos.PressedImageTint = System.Drawing.Color.White;
+            this.btnComodos.PressedOutline = System.Drawing.Color.Empty;
+            this.btnComodos.Rounding = new System.Windows.Forms.Padding(5);
+            this.btnComodos.Size = new System.Drawing.Size(216, 51);
+            this.btnComodos.TabIndex = 2;
+            this.btnComodos.TextAutoCenter = false;
+            this.btnComodos.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnComodos.Click += new System.EventHandler(this.btnComodos_Click);
+            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -431,6 +472,7 @@
         private FrameworkTest.SATAButton btnMenu;
         private System.Windows.Forms.Panel panelContent;
         private FrameworkTest.SATAButton sataButton1;
+        private FrameworkTest.SATAButton btnComodos;
     }
 }
 

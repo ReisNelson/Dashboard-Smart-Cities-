@@ -36,21 +36,25 @@ namespace Dashboard
             SATAUiFramework.BorderRadius borderRadius3 = new SATAUiFramework.BorderRadius();
             FrameworkTest.Charts.SATALineChart.DataSet dataSet1 = new FrameworkTest.Charts.SATALineChart.DataSet();
             FrameworkTest.Charts.SATALineChart.DataSet dataSet2 = new FrameworkTest.Charts.SATALineChart.DataSet();
+            FrameworkTest.Charts.SATALineChart.DataSet dataSet3 = new FrameworkTest.Charts.SATALineChart.DataSet();
+            FrameworkTest.Charts.SATALineChart.DataSet dataSet4 = new FrameworkTest.Charts.SATALineChart.DataSet();
+            FrameworkTest.Charts.SATALineChart.DataSet dataSet5 = new FrameworkTest.Charts.SATALineChart.DataSet();
+            FrameworkTest.Charts.SATALineChart.DataSet dataSet6 = new FrameworkTest.Charts.SATALineChart.DataSet();
             this.sataPanelEconomia = new SATAUiFramework.SATAPanel();
             this.label4 = new System.Windows.Forms.Label();
-            this.teste = new SATAUiFramework.Controls.SATACircularProgress();
+            this.gsTxT = new SATAUiFramework.Controls.SATACircularProgress();
             this.label5 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.ttgsTxt = new System.Windows.Forms.Label();
             this.sataSearchBox = new SATATextBox();
             this.sataPanel1 = new SATAUiFramework.SATAPanel();
-            this.sataCircularProgress1 = new SATAUiFramework.Controls.SATACircularProgress();
+            this.label1 = new System.Windows.Forms.Label();
+            this.gspTxT = new SATAUiFramework.Controls.SATACircularProgress();
             this.label2 = new System.Windows.Forms.Label();
             this.labelGastoAnt = new System.Windows.Forms.Label();
             this.sataPanel3 = new SATAUiFramework.SATAPanel();
             this.label6 = new System.Windows.Forms.Label();
             this.sataGraficoBarra = new FrameworkTest.Charts.SATALineChart();
             this.sataEllipseControl1 = new SATAUiFramework.Controls.SATAEllipseControl();
-            this.label1 = new System.Windows.Forms.Label();
             this.sataPanelEconomia.SuspendLayout();
             this.sataPanel1.SuspendLayout();
             this.sataPanel3.SuspendLayout();
@@ -68,9 +72,9 @@ namespace Dashboard
             this.sataPanelEconomia.BorderRadius = borderRadius1;
             this.sataPanelEconomia.BorderThickness = 0;
             this.sataPanelEconomia.Controls.Add(this.label4);
-            this.sataPanelEconomia.Controls.Add(this.teste);
+            this.sataPanelEconomia.Controls.Add(this.gsTxT);
             this.sataPanelEconomia.Controls.Add(this.label5);
-            this.sataPanelEconomia.Controls.Add(this.label3);
+            this.sataPanelEconomia.Controls.Add(this.ttgsTxt);
             this.sataPanelEconomia.Location = new System.Drawing.Point(50, 122);
             this.sataPanelEconomia.Name = "sataPanelEconomia";
             this.sataPanelEconomia.Size = new System.Drawing.Size(325, 223);
@@ -83,30 +87,30 @@ namespace Dashboard
             this.label4.ForeColor = System.Drawing.Color.LimeGreen;
             this.label4.Location = new System.Drawing.Point(151, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 17);
+            this.label4.Size = new System.Drawing.Size(55, 23);
             this.label4.TabIndex = 11;
             this.label4.Text = "Gasto";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // teste
+            // gsTxT
             // 
-            this.teste.AnimationSpeed = 5;
-            this.teste.FilledColor = System.Drawing.Color.LightBlue;
-            this.teste.FilledColorAlpha = 130;
-            this.teste.FilledThickness = 15;
-            this.teste.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.teste.IsAnimated = true;
-            this.teste.Location = new System.Drawing.Point(18, 43);
-            this.teste.Name = "teste";
-            this.teste.Percentage = 30;
-            this.teste.ShowText = true;
-            this.teste.Size = new System.Drawing.Size(105, 106);
-            this.teste.TabIndex = 11;
-            this.teste.TextColor = System.Drawing.Color.White;
-            this.teste.TextSize = 20;
-            this.teste.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
-            this.teste.UnfilledThickness = 15;
-            this.teste.Click += new System.EventHandler(this.sataBarraEconomia_Click);
+            this.gsTxT.AnimationSpeed = 5;
+            this.gsTxT.FilledColor = System.Drawing.Color.LightBlue;
+            this.gsTxT.FilledColorAlpha = 130;
+            this.gsTxT.FilledThickness = 15;
+            this.gsTxT.Font = new System.Drawing.Font("Verdana", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gsTxT.IsAnimated = true;
+            this.gsTxT.Location = new System.Drawing.Point(18, 43);
+            this.gsTxT.Name = "gsTxT";
+            this.gsTxT.Percentage = 30;
+            this.gsTxT.ShowText = true;
+            this.gsTxT.Size = new System.Drawing.Size(105, 106);
+            this.gsTxT.TabIndex = 11;
+            this.gsTxT.TextColor = System.Drawing.Color.White;
+            this.gsTxT.TextSize = 20;
+            this.gsTxT.UnFilledColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
+            this.gsTxT.UnfilledThickness = 15;
+            this.gsTxT.Click += new System.EventHandler(this.sataBarraEconomia_Click);
             // 
             // label5
             // 
@@ -115,20 +119,21 @@ namespace Dashboard
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.label5.Location = new System.Drawing.Point(191, 110);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(85, 17);
+            this.label5.Size = new System.Drawing.Size(107, 23);
             this.label5.TabIndex = 6;
             this.label5.Text = "essa semana";
             this.label5.Click += new System.EventHandler(this.labelSemanaAtual_Click);
             // 
-            // label3
+            // ttgsTxt
             // 
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(140, 58);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(155, 42);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "192 kWh";
+            this.ttgsTxt.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ttgsTxt.ForeColor = System.Drawing.Color.White;
+            this.ttgsTxt.Location = new System.Drawing.Point(140, 58);
+            this.ttgsTxt.Name = "ttgsTxt";
+            this.ttgsTxt.Size = new System.Drawing.Size(155, 42);
+            this.ttgsTxt.TabIndex = 5;
+            this.ttgsTxt.Text = "192 kWh";
+            this.ttgsTxt.Click += new System.EventHandler(this.label3_Click);
             // 
             // sataSearchBox
             // 
@@ -147,7 +152,7 @@ namespace Dashboard
             this.sataSearchBox.PasswordChar = false;
             this.sataSearchBox.PlaceholderColor = System.Drawing.Color.White;
             this.sataSearchBox.PlaceholderText = "Pesquisar...";
-            this.sataSearchBox.Size = new System.Drawing.Size(250, 39);
+            this.sataSearchBox.Size = new System.Drawing.Size(250, 45);
             this.sataSearchBox.TabIndex = 2;
             this.sataSearchBox.Texts = "";
             this.sataSearchBox.UnderlinedStyle = false;
@@ -165,7 +170,7 @@ namespace Dashboard
             this.sataPanel1.BorderRadius = borderRadius2;
             this.sataPanel1.BorderThickness = 0;
             this.sataPanel1.Controls.Add(this.label1);
-            this.sataPanel1.Controls.Add(this.sataCircularProgress1);
+            this.sataPanel1.Controls.Add(this.gspTxT);
             this.sataPanel1.Controls.Add(this.label2);
             this.sataPanel1.Controls.Add(this.labelGastoAnt);
             this.sataPanel1.Location = new System.Drawing.Point(446, 122);
@@ -173,25 +178,36 @@ namespace Dashboard
             this.sataPanel1.Size = new System.Drawing.Size(326, 223);
             this.sataPanel1.TabIndex = 4;
             // 
-            // sataCircularProgress1
+            // label1
             // 
-            this.sataCircularProgress1.AnimationSpeed = 5;
-            this.sataCircularProgress1.FilledColor = System.Drawing.Color.LightBlue;
-            this.sataCircularProgress1.FilledColorAlpha = 130;
-            this.sataCircularProgress1.FilledThickness = 15;
-            this.sataCircularProgress1.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.sataCircularProgress1.IsAnimated = true;
-            this.sataCircularProgress1.Location = new System.Drawing.Point(18, 43);
-            this.sataCircularProgress1.Name = "sataCircularProgress1";
-            this.sataCircularProgress1.Percentage = 17;
-            this.sataCircularProgress1.ShowText = true;
-            this.sataCircularProgress1.Size = new System.Drawing.Size(105, 106);
-            this.sataCircularProgress1.TabIndex = 11;
-            this.sataCircularProgress1.TextColor = System.Drawing.Color.White;
-            this.sataCircularProgress1.TextSize = 20;
-            this.sataCircularProgress1.UnFilledColor = System.Drawing.Color.Crimson;
-            this.sataCircularProgress1.UnfilledThickness = 15;
-            this.sataCircularProgress1.Click += new System.EventHandler(this.sataBarraEconomia_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label1.Location = new System.Drawing.Point(152, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 23);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Gasto";
+            // 
+            // gspTxT
+            // 
+            this.gspTxT.AnimationSpeed = 5;
+            this.gspTxT.FilledColor = System.Drawing.Color.LightBlue;
+            this.gspTxT.FilledColorAlpha = 130;
+            this.gspTxT.FilledThickness = 15;
+            this.gspTxT.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.gspTxT.IsAnimated = true;
+            this.gspTxT.Location = new System.Drawing.Point(18, 43);
+            this.gspTxT.Name = "gspTxT";
+            this.gspTxT.Percentage = 17;
+            this.gspTxT.ShowText = true;
+            this.gspTxT.Size = new System.Drawing.Size(105, 106);
+            this.gspTxT.TabIndex = 11;
+            this.gspTxT.TextColor = System.Drawing.Color.White;
+            this.gspTxT.TextSize = 20;
+            this.gspTxT.UnFilledColor = System.Drawing.Color.Crimson;
+            this.gspTxT.UnfilledThickness = 15;
+            this.gspTxT.Click += new System.EventHandler(this.sataBarraEconomia_Click);
             // 
             // label2
             // 
@@ -200,7 +216,7 @@ namespace Dashboard
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.label2.Location = new System.Drawing.Point(192, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 17);
+            this.label2.Size = new System.Drawing.Size(138, 23);
             this.label2.TabIndex = 6;
             this.label2.Text = "semana passada";
             this.label2.Click += new System.EventHandler(this.labelSemanaAtual_Click);
@@ -272,8 +288,56 @@ namespace Dashboard
         110F,
         50F,
         40F};
+            dataSet3.Label = "Sample Dataset 1";
+            dataSet3.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
+            dataSet3.PointColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
+            dataSet3.Points = new float[] {
+        105F,
+        65F,
+        80F,
+        120F,
+        135F,
+        65F,
+        30F};
+            dataSet4.Label = "Sample Dataset 2";
+            dataSet4.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(1)))));
+            dataSet4.PointColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(1)))));
+            dataSet4.Points = new float[] {
+        80F,
+        90F,
+        70F,
+        100F,
+        110F,
+        50F,
+        40F};
+            dataSet5.Label = "Sample Dataset 1";
+            dataSet5.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
+            dataSet5.PointColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
+            dataSet5.Points = new float[] {
+        105F,
+        65F,
+        80F,
+        120F,
+        135F,
+        65F,
+        30F};
+            dataSet6.Label = "Sample Dataset 2";
+            dataSet6.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(1)))));
+            dataSet6.PointColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(1)))));
+            dataSet6.Points = new float[] {
+        80F,
+        90F,
+        70F,
+        100F,
+        110F,
+        50F,
+        40F};
             this.sataGraficoBarra.DataSets.Add(dataSet1);
             this.sataGraficoBarra.DataSets.Add(dataSet2);
+            this.sataGraficoBarra.DataSets.Add(dataSet3);
+            this.sataGraficoBarra.DataSets.Add(dataSet4);
+            this.sataGraficoBarra.DataSets.Add(dataSet5);
+            this.sataGraficoBarra.DataSets.Add(dataSet6);
             this.sataGraficoBarra.DayColor = System.Drawing.Color.DarkGray;
             this.sataGraficoBarra.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.sataGraficoBarra.ForeColor = System.Drawing.Color.White;
@@ -293,17 +357,6 @@ namespace Dashboard
             // 
             this.sataEllipseControl1.CornerRadius = 45;
             this.sataEllipseControl1.TargetControl = this.sataGraficoBarra;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label1.Location = new System.Drawing.Point(152, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(43, 17);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Gasto";
             // 
             // UcHome
             // 
@@ -336,14 +389,14 @@ namespace Dashboard
 
         private SATAUiFramework.SATAPanel sataPanelEconomia;
         private SATATextBox sataSearchBox;
-        private SATAUiFramework.Controls.SATACircularProgress teste;
+        private SATAUiFramework.Controls.SATACircularProgress gsTxT;
         private System.Windows.Forms.Label label4;
         private SATAUiFramework.SATAPanel sataPanel1;
-        private SATAUiFramework.Controls.SATACircularProgress sataCircularProgress1;
+        private SATAUiFramework.Controls.SATACircularProgress gspTxT;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label labelGastoAnt;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label ttgsTxt;
         private SATAUiFramework.SATAPanel sataPanel3;
         private FrameworkTest.Charts.SATALineChart sataGraficoBarra;
         private SATAUiFramework.Controls.SATAEllipseControl sataEllipseControl1;
