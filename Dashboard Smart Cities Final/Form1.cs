@@ -20,7 +20,7 @@ namespace Dashboard_Smart_Cities_Final
         private UcConfiguracoes ucConfiguracoes;
         private UcSeguranca ucSeguranca;
         private UcRanking ucGastos;
-        private ControleAmbiente ucControleAmbiente;
+        private UcControleAmbiente ucControleAmbiente;
         private UserControl currentUc;
 
         MySqlConnection conexao;
@@ -54,7 +54,7 @@ namespace Dashboard_Smart_Cities_Final
             ucConfiguracoes = new UcConfiguracoes(conexao);
             ucSeguranca = new UcSeguranca(conexao);
             ucGastos = new UcRanking(conexao);
-            ucControleAmbiente = new ControleAmbiente(conexao);
+            ucControleAmbiente = new UcControleAmbiente(conexao);
         }
 
         private void Form1_Load(object sender, EventArgs e)
