@@ -1,6 +1,8 @@
 ﻿using Dashboard;
 using Dashboard_Smart_Cities_Final.UserControls;
+using MySqlConnector;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 
 namespace Dashboard_Smart_Cities_Final
@@ -18,11 +20,27 @@ namespace Dashboard_Smart_Cities_Final
         private UcConfiguracoes ucConfiguracoes;
         private UcSeguranca ucSeguranca;
         private UcRanking ucGastos;
+        private ControleAmbiente ucControleAmbiente;
         private UserControl currentUc;
 
+        MySqlConnection conexao;
         public Form1()
         {
             InitializeComponent();
+
+            try
+            {
+                string conexaoBD = "server=127.0.0.1;port=3306;database=projeto12;uid=root;pwd=Janete10!;";
+                conexao = new MySqlConnection(conexaoBD);
+                {
+                    conexao.Open();
+                    MessageBox.Show("Conectado com sucesso!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
 
             typeof(Panel).InvokeMember("DoubleBuffered",
                 System.Reflection.BindingFlags.SetProperty | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic,
@@ -31,11 +49,12 @@ namespace Dashboard_Smart_Cities_Final
             this.Resize += Form1_Resize;
 
             // Inicializa os UserControls
-            ucDashboard = new UcHome();
-            ucInformacoes = new UcInformacoes();
-            ucConfiguracoes = new UcConfiguracoes();
-            ucSeguranca = new UcSeguranca();
-            ucGastos = new UcRanking();
+            ucDashboard = new UcHome(conexao);
+            ucInformacoes = new UcInformacoes(conexao);
+            ucConfiguracoes = new UcConfiguracoes(conexao);
+            ucSeguranca = new UcSeguranca(conexao);
+            ucGastos = new UcRanking(conexao);
+            ucControleAmbiente = new ControleAmbiente(conexao);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -105,6 +124,8 @@ namespace Dashboard_Smart_Cities_Final
             uc.Dock = DockStyle.Fill;
             panelContent.Controls.Add(uc);
             currentUc = uc;
+
+
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -137,6 +158,11 @@ namespace Dashboard_Smart_Cities_Final
             this.Close();
         }
 
+        private void btnComodos_Click(object sender, EventArgs e)
+        {
+            ExibirUserControl(ucControleAmbiente); // Corrigido para usar a instância ucControleAmbiente
+        }
+
         private void Form1_Resize(object sender, EventArgs e)
         {
             // Renomeando o método para evitar ambiguidade  
@@ -159,5 +185,7 @@ namespace Dashboard_Smart_Cities_Final
         private void UserControl1_Load(object sender, EventArgs e) { }
         private void PanelContent_Paint(object sender, PaintEventArgs e) { }
         private void panelSidebar_Paint(object sender, PaintEventArgs e) { }
+
+        
     }
 }

@@ -8,16 +8,23 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Drawing2D;
+using MySqlConnector;
 
 namespace Dashboard
 {
     public partial class UcHome : UserControl
     {
-        public UcHome()
+        private MySqlConnection conexao;
+        public UcHome(MySqlConnection conexao)
         {
             InitializeComponent();
+            this.conexao = conexao;
         }
 
+        public UcHome()
+        {
+            
+        }
 
         private void UcHome_Load(object sender, EventArgs e)
         {
