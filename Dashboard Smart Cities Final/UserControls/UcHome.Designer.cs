@@ -48,7 +48,11 @@ namespace Dashboard
             this.sataSearchBox = new SATATextBox();
             this.sataPanel1 = new SATAUiFramework.SATAPanel();
             this.label1 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
             this.gspTxT = new SATAUiFramework.Controls.SATACircularProgress();
+=======
+            this.sataCircularProgress1 = new SATAUiFramework.Controls.SATACircularProgress();
+>>>>>>> b5d4c676846f847e8746b79f56961500f620a94a
             this.label2 = new System.Windows.Forms.Label();
             this.labelGastoAnt = new System.Windows.Forms.Label();
             this.sataPanel3 = new SATAUiFramework.SATAPanel();
@@ -179,6 +183,20 @@ namespace Dashboard
             this.sataPanel1.TabIndex = 4;
             // 
             // label1
+<<<<<<< HEAD
+=======
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
+            this.label1.Location = new System.Drawing.Point(152, 110);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(55, 23);
+            this.label1.TabIndex = 12;
+            this.label1.Text = "Gasto";
+            // 
+            // sataCircularProgress1
+>>>>>>> b5d4c676846f847e8746b79f56961500f620a94a
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

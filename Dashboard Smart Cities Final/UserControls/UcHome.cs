@@ -9,7 +9,10 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Drawing2D;
 using MySqlConnector;
+<<<<<<< HEAD
 
+=======
+>>>>>>> b5d4c676846f847e8746b79f56961500f620a94a
 
 namespace Dashboard
 {
@@ -24,7 +27,11 @@ namespace Dashboard
 
         public UcHome()
         {
+<<<<<<< HEAD
 
+=======
+            
+>>>>>>> b5d4c676846f847e8746b79f56961500f620a94a
         }
 
         private void UcHome_Load(object sender, EventArgs e)

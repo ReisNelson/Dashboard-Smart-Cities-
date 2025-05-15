@@ -2,6 +2,7 @@
 using Dashboard_Smart_Cities_Final.UserControls;
 using MySqlConnector;
 using System;
+using System.Data.SqlClient;
 using System.Windows.Forms;
 using Consumo;
 namespace Dashboard_Smart_Cities_Final
@@ -19,7 +20,11 @@ namespace Dashboard_Smart_Cities_Final
         private UcConfiguracoes ucConfiguracoes;
         private UcSeguranca ucSeguranca;
         private UcRanking ucGastos;
+<<<<<<< HEAD
         private ControleAmbiente ucControleAmbiente;
+=======
+        private UcControleAmbiente ucControleAmbiente;
+>>>>>>> b5d4c676846f847e8746b79f56961500f620a94a
         private UserControl currentUc;
 
         MySqlConnection conexao;
@@ -30,6 +35,20 @@ namespace Dashboard_Smart_Cities_Final
             try
             {
                 string conexaoBD = "server=127.0.0.1;port=3306;database=projeto12;uid=root;pwd=Janete10!;Allow User Variables=true;";
+                conexao = new MySqlConnection(conexaoBD);
+                {
+                    conexao.Open();
+                    MessageBox.Show("Conectado com sucesso!");
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Erro: " + ex.Message);
+            }
+
+            try
+            {
+                string conexaoBD = "server=127.0.0.1;port=3306;database=projeto12;uid=root;pwd=Janete10!;";
                 conexao = new MySqlConnection(conexaoBD);
                 {
                     conexao.Open();
@@ -53,7 +72,11 @@ namespace Dashboard_Smart_Cities_Final
             ucConfiguracoes = new UcConfiguracoes(conexao);
             ucSeguranca = new UcSeguranca(conexao);
             ucGastos = new UcRanking(conexao);
+<<<<<<< HEAD
             ucControleAmbiente = new ControleAmbiente(conexao);
+=======
+            ucControleAmbiente = new UcControleAmbiente(conexao);
+>>>>>>> b5d4c676846f847e8746b79f56961500f620a94a
         }
 
         private void Form1_Load(object sender, EventArgs e)
