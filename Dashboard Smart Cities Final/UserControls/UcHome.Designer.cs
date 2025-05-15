@@ -1,4 +1,5 @@
 ﻿using System;
+using SATAUiFramework.Controls;
 
 namespace Dashboard
 {
@@ -48,16 +49,12 @@ namespace Dashboard
             this.sataSearchBox = new SATATextBox();
             this.sataPanel1 = new SATAUiFramework.SATAPanel();
             this.label1 = new System.Windows.Forms.Label();
-<<<<<<< HEAD
             this.gspTxT = new SATAUiFramework.Controls.SATACircularProgress();
-=======
-            this.sataCircularProgress1 = new SATAUiFramework.Controls.SATACircularProgress();
->>>>>>> b5d4c676846f847e8746b79f56961500f620a94a
             this.label2 = new System.Windows.Forms.Label();
-            this.labelGastoAnt = new System.Windows.Forms.Label();
+            this.ttgsptxt = new System.Windows.Forms.Label();
             this.sataPanel3 = new SATAUiFramework.SATAPanel();
             this.label6 = new System.Windows.Forms.Label();
-            this.sataGraficoBarra = new FrameworkTest.Charts.SATALineChart();
+            this.chartConsumo = new FrameworkTest.Charts.SATALineChart();
             this.sataEllipseControl1 = new SATAUiFramework.Controls.SATAEllipseControl();
             this.sataPanelEconomia.SuspendLayout();
             this.sataPanel1.SuspendLayout();
@@ -137,7 +134,7 @@ namespace Dashboard
             this.ttgsTxt.Size = new System.Drawing.Size(155, 42);
             this.ttgsTxt.TabIndex = 5;
             this.ttgsTxt.Text = "192 kWh";
-            this.ttgsTxt.Click += new System.EventHandler(this.label3_Click);
+            this.ttgsTxt.Click += new System.EventHandler(this.ttgsTxt_Click);
             // 
             // sataSearchBox
             // 
@@ -176,27 +173,13 @@ namespace Dashboard
             this.sataPanel1.Controls.Add(this.label1);
             this.sataPanel1.Controls.Add(this.gspTxT);
             this.sataPanel1.Controls.Add(this.label2);
-            this.sataPanel1.Controls.Add(this.labelGastoAnt);
+            this.sataPanel1.Controls.Add(this.ttgsptxt);
             this.sataPanel1.Location = new System.Drawing.Point(446, 122);
             this.sataPanel1.Name = "sataPanel1";
             this.sataPanel1.Size = new System.Drawing.Size(326, 223);
             this.sataPanel1.TabIndex = 4;
             // 
             // label1
-<<<<<<< HEAD
-=======
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.LimeGreen;
-            this.label1.Location = new System.Drawing.Point(152, 110);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 23);
-            this.label1.TabIndex = 12;
-            this.label1.Text = "Gasto";
-            // 
-            // sataCircularProgress1
->>>>>>> b5d4c676846f847e8746b79f56961500f620a94a
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -239,16 +222,16 @@ namespace Dashboard
             this.label2.Text = "semana passada";
             this.label2.Click += new System.EventHandler(this.labelSemanaAtual_Click);
             // 
-            // labelGastoAnt
+            // ttgsptxt
             // 
-            this.labelGastoAnt.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.labelGastoAnt.ForeColor = System.Drawing.Color.White;
-            this.labelGastoAnt.Location = new System.Drawing.Point(146, 58);
-            this.labelGastoAnt.Name = "labelGastoAnt";
-            this.labelGastoAnt.Size = new System.Drawing.Size(155, 42);
-            this.labelGastoAnt.TabIndex = 5;
-            this.labelGastoAnt.Text = "147 kWh";
-            this.labelGastoAnt.Click += new System.EventHandler(this.labelGastoAnt_Click);
+            this.ttgsptxt.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ttgsptxt.ForeColor = System.Drawing.Color.White;
+            this.ttgsptxt.Location = new System.Drawing.Point(146, 58);
+            this.ttgsptxt.Name = "ttgsptxt";
+            this.ttgsptxt.Size = new System.Drawing.Size(155, 42);
+            this.ttgsptxt.TabIndex = 5;
+            this.ttgsptxt.Text = "147 kWh";
+            this.ttgsptxt.Click += new System.EventHandler(this.labelGastoAnt_Click);
             // 
             // sataPanel3
             // 
@@ -277,16 +260,16 @@ namespace Dashboard
             this.label6.TabIndex = 5;
             this.label6.Text = "Geral";
             // 
-            // sataGraficoBarra
+            // chartConsumo
             // 
-            this.sataGraficoBarra.AutoMaxValue = false;
-            this.sataGraficoBarra.AxisColor = System.Drawing.Color.White;
-            this.sataGraficoBarra.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
-            this.sataGraficoBarra.ChartPadding = 55;
-            this.sataGraficoBarra.CustomXAxis = new string[0];
-            dataSet1.Label = "Gastou";
-            dataSet1.LineColor = System.Drawing.Color.RoyalBlue;
-            dataSet1.PointColor = System.Drawing.Color.Coral;
+            this.chartConsumo.AutoMaxValue = false;
+            this.chartConsumo.AxisColor = System.Drawing.Color.White;
+            this.chartConsumo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.chartConsumo.ChartPadding = 55;
+            this.chartConsumo.CustomXAxis = new string[0];
+            dataSet1.Label = "Sample Dataset 1";
+            dataSet1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
+            dataSet1.PointColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
             dataSet1.Points = new float[] {
         105F,
         65F,
@@ -295,9 +278,9 @@ namespace Dashboard
         135F,
         65F,
         30F};
-            dataSet2.Label = "Economizou";
-            dataSet2.LineColor = System.Drawing.Color.Firebrick;
-            dataSet2.PointColor = System.Drawing.Color.SpringGreen;
+            dataSet2.Label = "Sample Dataset 2";
+            dataSet2.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(1)))));
+            dataSet2.PointColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(1)))));
             dataSet2.Points = new float[] {
         80F,
         90F,
@@ -350,37 +333,38 @@ namespace Dashboard
         110F,
         50F,
         40F};
-            this.sataGraficoBarra.DataSets.Add(dataSet1);
-            this.sataGraficoBarra.DataSets.Add(dataSet2);
-            this.sataGraficoBarra.DataSets.Add(dataSet3);
-            this.sataGraficoBarra.DataSets.Add(dataSet4);
-            this.sataGraficoBarra.DataSets.Add(dataSet5);
-            this.sataGraficoBarra.DataSets.Add(dataSet6);
-            this.sataGraficoBarra.DayColor = System.Drawing.Color.DarkGray;
-            this.sataGraficoBarra.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.sataGraficoBarra.ForeColor = System.Drawing.Color.White;
-            this.sataGraficoBarra.GradientBackground = true;
-            this.sataGraficoBarra.GridColor = System.Drawing.Color.LightGray;
-            this.sataGraficoBarra.Location = new System.Drawing.Point(50, 365);
-            this.sataGraficoBarra.Margin = new System.Windows.Forms.Padding(4);
-            this.sataGraficoBarra.MaxValue = 200F;
-            this.sataGraficoBarra.Name = "sataGraficoBarra";
-            this.sataGraficoBarra.ShortDates = true;
-            this.sataGraficoBarra.Size = new System.Drawing.Size(1053, 367);
-            this.sataGraficoBarra.TabIndex = 13;
-            this.sataGraficoBarra.UseBezier = true;
-            this.sataGraficoBarra.UsePercent = false;
+            this.chartConsumo.DataSets.Add(dataSet1);
+            this.chartConsumo.DataSets.Add(dataSet2);
+            this.chartConsumo.DataSets.Add(dataSet3);
+            this.chartConsumo.DataSets.Add(dataSet4);
+            this.chartConsumo.DataSets.Add(dataSet5);
+            this.chartConsumo.DataSets.Add(dataSet6);
+            this.chartConsumo.DayColor = System.Drawing.Color.DarkGray;
+            this.chartConsumo.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.chartConsumo.ForeColor = System.Drawing.Color.White;
+            this.chartConsumo.GradientBackground = true;
+            this.chartConsumo.GridColor = System.Drawing.Color.LightGray;
+            this.chartConsumo.Location = new System.Drawing.Point(50, 365);
+            this.chartConsumo.Margin = new System.Windows.Forms.Padding(4);
+            this.chartConsumo.MaxValue = 75F;
+            this.chartConsumo.Name = "chartConsumo";
+            this.chartConsumo.ShortDates = true;
+            this.chartConsumo.Size = new System.Drawing.Size(1053, 367);
+            this.chartConsumo.TabIndex = 13;
+            this.chartConsumo.UseBezier = true;
+            this.chartConsumo.UsePercent = false;
+            this.chartConsumo.Load += new System.EventHandler(this.sataGraficoBarra_Load);
             // 
             // sataEllipseControl1
             // 
             this.sataEllipseControl1.CornerRadius = 45;
-            this.sataEllipseControl1.TargetControl = this.sataGraficoBarra;
+            this.sataEllipseControl1.TargetControl = this.chartConsumo;
             // 
             // UcHome
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(33)))));
-            this.Controls.Add(this.sataGraficoBarra);
+            this.Controls.Add(this.chartConsumo);
             this.Controls.Add(this.sataPanel3);
             this.Controls.Add(this.sataPanel1);
             this.Controls.Add(this.sataPanelEconomia);
@@ -400,8 +384,6 @@ namespace Dashboard
         {
             throw new NotImplementedException();
         }
-        // O erro ocorre porque o método sataGraficoBarra_Load não está implementado na classe UcHome.
-        // Para corrigir, adicione o método no code-behind (provavelmente em UcHome.cs):
 
         #endregion
 
@@ -412,13 +394,14 @@ namespace Dashboard
         private SATAUiFramework.SATAPanel sataPanel1;
         private SATAUiFramework.Controls.SATACircularProgress gspTxT;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label labelGastoAnt;
+        private System.Windows.Forms.Label ttgsptxt;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label ttgsTxt;
         private SATAUiFramework.SATAPanel sataPanel3;
-        private FrameworkTest.Charts.SATALineChart sataGraficoBarra;
+        private FrameworkTest.Charts.SATALineChart chartConsumo;
         private SATAUiFramework.Controls.SATAEllipseControl sataEllipseControl1;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label1;
+
     }
 }

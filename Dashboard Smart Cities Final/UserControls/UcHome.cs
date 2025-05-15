@@ -9,10 +9,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing.Drawing2D;
 using MySqlConnector;
-<<<<<<< HEAD
-
-=======
->>>>>>> b5d4c676846f847e8746b79f56961500f620a94a
+using Consumo;
+using FrameworkTest.Charts;
 
 namespace Dashboard
 {
@@ -23,15 +21,17 @@ namespace Dashboard
         {
             InitializeComponent();
             this.conexao = conexao;
+            AtualizarConsumoSemanaAtual();
+            AtualizarConsumoSemanaPassada();
+            AtualizarEconomiaCircularProgress();
+            AtualizarEconomiaSemanaPassadaCircularProgress();
+            AtualizarGraficoConsumoMensal();
         }
+        
 
         public UcHome()
         {
-<<<<<<< HEAD
 
-=======
-            
->>>>>>> b5d4c676846f847e8746b79f56961500f620a94a
         }
 
         private void UcHome_Load(object sender, EventArgs e)
@@ -61,7 +61,6 @@ namespace Dashboard
 
         private void sataBarraEconomia_Click(object sender, EventArgs e)
         {
-            double totalKwhUltimaSemana = ObterTotalKwhUltimaSemana();
 
         }
 
@@ -100,44 +99,214 @@ namespace Dashboard
 
         }
 
-
-
-        public double ObterTotalKwhUltimaSemana()
+        private void sataGraficoBarra_Load(object sender, EventArgs e)
         {
-            try
-            {
-                string sql = @"
-        SELECT SUM(valor_kWh) AS total_kwh_semana
-        FROM CONSUMO
-        WHERE data >= CURDATE() - INTERVAL 7 DAY
-        AND id_usuario = @idUsuario;
-    ";
 
-                using (MySqlCommand cmd = new MySqlCommand(sql, conexao))
+        }
+
+        private void ttgsTxt_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AtualizarConsumoSemanaAtual()
+        {
+            double totalSemana = 0;
+            using (var cmd = new MySqlCommand(@"
+        SELECT IFNULL(SUM(valor_kWh), 0) 
+        FROM CONSUMO 
+        WHERE YEARWEEK(data, 1) = YEARWEEK(CURDATE(), 1)", conexao))
+            {
+                var result = cmd.ExecuteScalar();
+                if (result != null && double.TryParse(result.ToString(), out double valor))
                 {
-                    object resultado = cmd.ExecuteScalar();
-                    if (resultado != DBNull.Value)
-                    {
-                        return Convert.ToDouble(resultado);
-                    }
-                    else
-                    {
-                        return 0.0;
-                    }
+                    totalSemana = valor;
                 }
             }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao buscar kWh da última semana: " + ex.Message);
-                return 0.0;
-            }
+            ttgsTxt.Text = $"{totalSemana:F0} kWh";
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void AtualizarConsumoSemanaPassada()
         {
-            double totalKwhUltimaSemana = ObterTotalKwhUltimaSemana();
-            ttgsTxt.Text = totalKwhUltimaSemana.ToString("F2") + " kWh";
+            double totalSemanaPassada = 0;
+            using (var cmd = new MySqlCommand(@"
+        SELECT IFNULL(SUM(valor_kWh), 0) 
+        FROM CONSUMO 
+        WHERE YEARWEEK(data, 1) = YEARWEEK(CURDATE(), 1) - 1", conexao))
+            {
+                var result = cmd.ExecuteScalar();
+                if (result != null && double.TryParse(result.ToString(), out double valor))
+                {
+                    totalSemanaPassada = valor;
+                }
+            }
+            // Exemplo: atribua o valor a um label específico para semana passada
+            ttgsptxt.Text = $"{totalSemanaPassada:F0} kWh";
         }
+
+        private void AtualizarEconomiaCircularProgress()
+        {
+            double consumoSemanaAtual = 0;
+            double consumoSemanaMesAnterior = 0;
+
+            // Consumo da semana atual
+            using (var cmd = new MySqlCommand(@"
+        SELECT IFNULL(SUM(valor_kWh), 0) 
+        FROM CONSUMO 
+        WHERE YEARWEEK(data, 1) = YEARWEEK(CURDATE(), 1)", conexao))
+            {
+                var result = cmd.ExecuteScalar();
+                if (result != null && double.TryParse(result.ToString(), out double valor))
+                    consumoSemanaAtual = valor;
+            }
+
+            // Consumo da mesma semana do mês anterior
+            using (var cmd = new MySqlCommand(@"
+        SELECT IFNULL(SUM(valor_kWh), 0)
+        FROM CONSUMO
+        WHERE YEARWEEK(data, 1) = YEARWEEK(DATE_SUB(CURDATE(), INTERVAL 1 MONTH), 1)", conexao))
+            {
+                var result = cmd.ExecuteScalar();
+                if (result != null && double.TryParse(result.ToString(), out double valor))
+                    consumoSemanaMesAnterior = valor;
+            }
+
+            // Calcula a porcentagem de economia
+            double economia = 0;
+            if (consumoSemanaMesAnterior > 0)
+            {
+                economia = ((consumoSemanaMesAnterior - consumoSemanaAtual) / consumoSemanaMesAnterior) * 100.0;
+                if (economia < 0) economia = 0; // Não exibe economia negativa
+            }
+
+            // Atualiza o circular progress (ajuste o nome do controle conforme seu projeto)
+            gsTxT.percentage = (int)Math.Round(economia);
+        }
+
+        private void AtualizarEconomiaSemanaPassadaCircularProgress()
+        {
+            double consumoSemanaPassada = 0;
+            double consumoSemanaPassadaMesAnterior = 0;
+
+            // Consumo da semana passada
+            using (var cmd = new MySqlCommand(@"
+        SELECT IFNULL(SUM(valor_kWh), 0) 
+        FROM CONSUMO 
+        WHERE YEARWEEK(data, 1) = YEARWEEK(CURDATE(), 1) - 1", conexao))
+            {
+                var result = cmd.ExecuteScalar();
+                if (result != null && double.TryParse(result.ToString(), out double valor))
+                    consumoSemanaPassada = valor;
+            }
+
+            // Consumo da mesma semana do mês anterior
+            using (var cmd = new MySqlCommand(@"
+        SELECT IFNULL(SUM(valor_kWh), 0)
+        FROM CONSUMO
+        WHERE YEARWEEK(data, 1) = YEARWEEK(DATE_SUB(CURDATE(), INTERVAL 1 MONTH), 1) - 1", conexao))
+            {
+                var result = cmd.ExecuteScalar();
+                if (result != null && double.TryParse(result.ToString(), out double valor))
+                    consumoSemanaPassadaMesAnterior = valor;
+            }
+
+            // Calcula a porcentagem de economia
+            double economia = 0;
+            if (consumoSemanaPassadaMesAnterior > 0)
+            {
+                economia = ((consumoSemanaPassadaMesAnterior - consumoSemanaPassada) / consumoSemanaPassadaMesAnterior) * 100.0;
+                if (economia < 0) economia = 0; // Não exibe economia negativa
+            }
+
+            // Atualiza o circular progress (ajuste o nome do controle conforme seu projeto)
+            gspTxT.percentage = (int)Math.Round(economia);
+        }
+
+        private float[] ObterConsumoSemanalMes(int ano, int mes)
+        {
+            // Descobre a primeira e última semana do mês
+            DateTime primeiroDia = new DateTime(ano, mes, 1);
+            DateTime ultimoDia = primeiroDia.AddMonths(1).AddDays(-1);
+
+            // O número da semana pode variar conforme o ano, então vamos calcular todas as semanas do mês
+            List<int> semanas = new List<int>();
+            for (DateTime dt = primeiroDia; dt <= ultimoDia; dt = dt.AddDays(1))
+            {
+                int semana = System.Globalization.CultureInfo.InvariantCulture.Calendar.GetWeekOfYear(
+                    dt, System.Globalization.CalendarWeekRule.FirstFourDayWeek, DayOfWeek.Monday);
+                if (!semanas.Contains(semana))
+                    semanas.Add(semana);
+            }
+
+            float[] consumos = new float[semanas.Count];
+
+            for (int i = 0; i < semanas.Count; i++)
+            {
+                int semana = semanas[i];
+                using (var cmd = new MySqlCommand(@"
+            SELECT IFNULL(SUM(valor_kWh), 0)
+            FROM CONSUMO
+            WHERE YEAR(data) = @ano AND MONTH(data) = @mes
+              AND WEEK(data, 1) = @semana", conexao))
+                {
+                    cmd.Parameters.AddWithValue("@ano", ano);
+                    cmd.Parameters.AddWithValue("@mes", mes);
+                    cmd.Parameters.AddWithValue("@semana", semana);
+
+                    var result = cmd.ExecuteScalar();
+                    if (result != null && float.TryParse(result.ToString(), out float valor))
+                        consumos[i] = valor;
+                    else
+                        consumos[i] = 0;
+                }
+            }
+            return consumos;
+        }
+
+        private void AtualizarGraficoConsumoMensal()
+        {
+            DateTime hoje = DateTime.Today;
+            int anoAtual = hoje.Year;
+            int mesAtual = hoje.Month;
+
+            // Mês anterior
+            DateTime mesAnterior = hoje.AddMonths(-1);
+            int anoAnterior = mesAnterior.Year;
+            int mesAnt = mesAnterior.Month;
+
+            float[] consumosMesAtual = ObterConsumoSemanalMes(anoAtual, mesAtual);
+            float[] consumosMesAnterior = ObterConsumoSemanalMes(anoAnterior, mesAnt);
+
+            // Gera os rótulos das semanas dinamicamente
+            int qtdSemanas = Math.Max(consumosMesAtual.Length, consumosMesAnterior.Length);
+            string[] rotulosSemanas = Enumerable.Range(1, qtdSemanas)
+                .Select(i => $"Semana {i}")
+                .ToArray();
+
+            var dataSetMesAtual = new FrameworkTest.Charts.SATALineChart.DataSet
+            {
+                Points = consumosMesAtual,
+                LineColor = Color.Blue,
+                PointColor = Color.Blue,
+                Label = "Mês Atual"
+            };
+
+            var dataSetMesAnterior = new FrameworkTest.Charts.SATALineChart.DataSet
+            {
+                Points = consumosMesAnterior,
+                LineColor = Color.Gold,
+                PointColor = Color.Gold,
+                Label = "Mês Anterior"
+            };
+
+            chartConsumo.DataSets = new List<FrameworkTest.Charts.SATALineChart.DataSet> { dataSetMesAtual, dataSetMesAnterior };
+            chartConsumo.CustomXAxis = rotulosSemanas; // <-- Aqui você define os nomes das semanas
+            chartConsumo.AutoMaxValue = true;
+            chartConsumo.ShowGrid = true;
+            chartConsumo.ShowLabels = true;
+        }
+
+
     }
 }
 

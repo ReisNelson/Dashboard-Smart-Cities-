@@ -20,11 +20,8 @@ namespace Dashboard_Smart_Cities_Final
         private UcConfiguracoes ucConfiguracoes;
         private UcSeguranca ucSeguranca;
         private UcRanking ucGastos;
-<<<<<<< HEAD
-        private ControleAmbiente ucControleAmbiente;
-=======
+
         private UcControleAmbiente ucControleAmbiente;
->>>>>>> b5d4c676846f847e8746b79f56961500f620a94a
         private UserControl currentUc;
 
         MySqlConnection conexao;
@@ -34,8 +31,7 @@ namespace Dashboard_Smart_Cities_Final
             ProgramConsumo.CalcConsumo(); string connectionString = "server=127.0.0.1;port=3306;database=projeto12;uid=root;pwd=Janete10!;Allow User Variables=true;";
             try
             {
-                string conexaoBD = "server=127.0.0.1;port=3306;database=projeto12;uid=root;pwd=Janete10!;Allow User Variables=true;";
-                conexao = new MySqlConnection(conexaoBD);
+                conexao = new MySqlConnection(connectionString);
                 {
                     conexao.Open();
                     MessageBox.Show("Conectado com sucesso!");
@@ -46,19 +42,6 @@ namespace Dashboard_Smart_Cities_Final
                 MessageBox.Show("Erro: " + ex.Message);
             }
 
-            try
-            {
-                string conexaoBD = "server=127.0.0.1;port=3306;database=projeto12;uid=root;pwd=Janete10!;";
-                conexao = new MySqlConnection(conexaoBD);
-                {
-                    conexao.Open();
-                    MessageBox.Show("Conectado com sucesso!");
-                }
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro: " + ex.Message);
-            }
 
             typeof(Panel).InvokeMember("DoubleBuffered",
                 System.Reflection.BindingFlags.SetProperty | System.Reflection.BindingFlags.Instance | System.Reflection.BindingFlags.NonPublic,
@@ -72,11 +55,7 @@ namespace Dashboard_Smart_Cities_Final
             ucConfiguracoes = new UcConfiguracoes(conexao);
             ucSeguranca = new UcSeguranca(conexao);
             ucGastos = new UcRanking(conexao);
-<<<<<<< HEAD
-            ucControleAmbiente = new ControleAmbiente(conexao);
-=======
             ucControleAmbiente = new UcControleAmbiente(conexao);
->>>>>>> b5d4c676846f847e8746b79f56961500f620a94a
         }
 
         private void Form1_Load(object sender, EventArgs e)
