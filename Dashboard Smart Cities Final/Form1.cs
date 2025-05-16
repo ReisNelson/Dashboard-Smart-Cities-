@@ -19,7 +19,7 @@ namespace Dashboard_Smart_Cities_Final
         private UcInformacoes ucInformacoes;
         private UcConfiguracoes ucConfiguracoes;
         private UcSeguranca ucSeguranca;
-        private UcRanking ucGastos;
+        private UcRanking ucRanking;
 
         private UcControleAmbiente ucControleAmbiente;
         private UserControl currentUc;
@@ -28,7 +28,7 @@ namespace Dashboard_Smart_Cities_Final
         public Form1()
         {
             InitializeComponent();
-            ProgramConsumo.CalcConsumo(); string connectionString = "server=127.0.0.1;port=3306;database=projeto12;uid=root;pwd=Janete10!;Allow User Variables=true;";
+            ProgramConsumo.CalcConsumo(); string connectionString = "server=127.0.0.1;port=3306;database=smartcities_db;uid=root;pwd=Enterprise2006;Allow User Variables=true;";
             try
             {
                 conexao = new MySqlConnection(connectionString);
@@ -54,8 +54,8 @@ namespace Dashboard_Smart_Cities_Final
             ucInformacoes = new UcInformacoes(conexao);
             ucConfiguracoes = new UcConfiguracoes(conexao);
             ucSeguranca = new UcSeguranca(conexao);
-            ucGastos = new UcRanking(conexao);
             ucControleAmbiente = new UcControleAmbiente(conexao);
+            ucRanking = new UcRanking(conexao);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -78,7 +78,7 @@ namespace Dashboard_Smart_Cities_Final
             btnInfo.Text = mostrar ? "Informações" : "";
             btnConfig.Text = mostrar ? "Configurações" : "";
             btnSeguranca.Text = mostrar ? "Segurança" : "";
-            btnGastos.Text = mostrar ? "Gastos" : "";
+            btnRanking.Text = mostrar ? "Gastos" : "";
         }
 
         private void sidebarTimer_Tick(object sender, EventArgs e)
@@ -117,16 +117,17 @@ namespace Dashboard_Smart_Cities_Final
 
         private void ExibirUserControl(UserControl uc)
         {
+            if (uc == currentUc) return;
+
+            if (uc.Parent != null)
+                uc.Parent.Controls.Remove(uc);
+
             if (currentUc != null)
-            {
                 panelContent.Controls.Remove(currentUc);
-            }
 
             uc.Dock = DockStyle.Fill;
             panelContent.Controls.Add(uc);
             currentUc = uc;
-
-
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -149,9 +150,9 @@ namespace Dashboard_Smart_Cities_Final
             ExibirUserControl(ucSeguranca);
         }
 
-        private void btnGastos_Click(object sender, EventArgs e)
+        private void btnRanking_Click(object sender, EventArgs e)
         {
-            ExibirUserControl(ucGastos);
+            ExibirUserControl(ucRanking);
         }
 
         private void btnFechar_Click(object sender, EventArgs e)

@@ -132,12 +132,6 @@
     <Compile Include="UserControls\UcControleAmbiente.Designer.cs">
       <DependentUpon>UcControleAmbiente.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControls\UcRanking.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UcRanking.Designer.cs">
-      <DependentUpon>UcRanking.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserControls\UcHome.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -149,6 +143,12 @@
     </Compile>
     <Compile Include="UserControls\UcInformacoes.Designer.cs">
       <DependentUpon>UcInformacoes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UcRanking.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcRanking.Designer.cs">
+      <DependentUpon>UcRanking.cs</DependentUpon>
     </Compile>
     <Compile Include="UserControls\UcSeguranca.cs">
       <SubType>UserControl</SubType>
@@ -178,11 +178,11 @@
     <EmbeddedResource Include="UserControls\UcInformacoes.resx">
       <DependentUpon>UcInformacoes.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UcRanking.resx">
-      <DependentUpon>UcRanking.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UcHome.resx">
       <DependentUpon>UcHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcRanking.resx">
+      <DependentUpon>UcRanking.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UcSeguranca.resx">
       <DependentUpon>UcSeguranca.cs</DependentUpon>

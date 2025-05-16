@@ -37,7 +37,8 @@
             this.sidebarTimer = new System.Windows.Forms.Timer(this.components);
             this.panelSidebar = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnGastos = new FrameworkTest.SATAButton();
+            this.btnRanking = new FrameworkTest.SATAButton();
+            this.btnComodos = new FrameworkTest.SATAButton();
             this.sataButton1 = new FrameworkTest.SATAButton();
             this.btnSeguranca = new FrameworkTest.SATAButton();
             this.btnDashboard = new FrameworkTest.SATAButton();
@@ -46,7 +47,6 @@
             this.btnMenu = new FrameworkTest.SATAButton();
             this.panelContent = new System.Windows.Forms.Panel();
             this.btnFechar = new System.Windows.Forms.Button();
-            this.btnComodos = new FrameworkTest.SATAButton();
             this.panelSidebar.SuspendLayout();
             this.panelContent.SuspendLayout();
             this.SuspendLayout();
@@ -65,7 +65,7 @@
             // 
             this.panelSidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
             this.panelSidebar.Controls.Add(this.label1);
-            this.panelSidebar.Controls.Add(this.btnGastos);
+            this.panelSidebar.Controls.Add(this.btnRanking);
             this.panelSidebar.Controls.Add(this.btnComodos);
             this.panelSidebar.Controls.Add(this.sataButton1);
             this.panelSidebar.Controls.Add(this.btnSeguranca);
@@ -93,44 +93,83 @@
             this.label1.Text = "Smart Cities";
             this.label1.Click += new System.EventHandler(this.Label1_Click);
             // 
-            // btnGastos
+            // btnRanking
             // 
-            this.btnGastos.ButtonText = "Ranking de Consumo";
-            this.btnGastos.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
-            this.btnGastos.CheckedForeColor = System.Drawing.Color.White;
-            this.btnGastos.CheckedImageTint = System.Drawing.Color.White;
-            this.btnGastos.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
-            this.btnGastos.CustomDialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnGastos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGastos.HoverBackground = System.Drawing.Color.OldLace;
-            this.btnGastos.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
-            this.btnGastos.HoverImage = null;
-            this.btnGastos.HoverImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
-            this.btnGastos.HoverOutline = System.Drawing.Color.Empty;
-            this.btnGastos.Image = ((System.Drawing.Image)(resources.GetObject("btnGastos.Image")));
-            this.btnGastos.ImageAutoCenter = false;
-            this.btnGastos.ImageExpand = new System.Drawing.Point(0, 0);
-            this.btnGastos.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnGastos.ImageTint = System.Drawing.Color.White;
-            this.btnGastos.IsToggleButton = false;
-            this.btnGastos.IsToggled = false;
-            this.btnGastos.Location = new System.Drawing.Point(4, 158);
-            this.btnGastos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnGastos.Name = "btnGastos";
-            this.btnGastos.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
-            this.btnGastos.NormalForeColor = System.Drawing.Color.White;
-            this.btnGastos.NormalOutline = System.Drawing.Color.Empty;
-            this.btnGastos.OutlineThickness = 2F;
-            this.btnGastos.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
-            this.btnGastos.PressedForeColor = System.Drawing.Color.White;
-            this.btnGastos.PressedImageTint = System.Drawing.Color.White;
-            this.btnGastos.PressedOutline = System.Drawing.Color.Empty;
-            this.btnGastos.Rounding = new System.Windows.Forms.Padding(5);
-            this.btnGastos.Size = new System.Drawing.Size(216, 51);
-            this.btnGastos.TabIndex = 2;
-            this.btnGastos.TextAutoCenter = false;
-            this.btnGastos.TextOffset = new System.Drawing.Point(15, 0);
-            this.btnGastos.Click += new System.EventHandler(this.btnGastos_Click);
+            this.btnRanking.ButtonText = "Ranking de Consumo";
+            this.btnRanking.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
+            this.btnRanking.CheckedForeColor = System.Drawing.Color.White;
+            this.btnRanking.CheckedImageTint = System.Drawing.Color.White;
+            this.btnRanking.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
+            this.btnRanking.CustomDialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnRanking.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRanking.HoverBackground = System.Drawing.Color.OldLace;
+            this.btnRanking.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.btnRanking.HoverImage = null;
+            this.btnRanking.HoverImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.btnRanking.HoverOutline = System.Drawing.Color.Empty;
+            this.btnRanking.Image = ((System.Drawing.Image)(resources.GetObject("btnRanking.Image")));
+            this.btnRanking.ImageAutoCenter = false;
+            this.btnRanking.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btnRanking.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnRanking.ImageTint = System.Drawing.Color.White;
+            this.btnRanking.IsToggleButton = false;
+            this.btnRanking.IsToggled = false;
+            this.btnRanking.Location = new System.Drawing.Point(4, 158);
+            this.btnRanking.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnRanking.Name = "btnRanking";
+            this.btnRanking.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.btnRanking.NormalForeColor = System.Drawing.Color.White;
+            this.btnRanking.NormalOutline = System.Drawing.Color.Empty;
+            this.btnRanking.OutlineThickness = 2F;
+            this.btnRanking.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.btnRanking.PressedForeColor = System.Drawing.Color.White;
+            this.btnRanking.PressedImageTint = System.Drawing.Color.White;
+            this.btnRanking.PressedOutline = System.Drawing.Color.Empty;
+            this.btnRanking.Rounding = new System.Windows.Forms.Padding(5);
+            this.btnRanking.Size = new System.Drawing.Size(216, 51);
+            this.btnRanking.TabIndex = 2;
+            this.btnRanking.TextAutoCenter = false;
+            this.btnRanking.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnRanking.Click += new System.EventHandler(this.btnRanking_Click);
+            // 
+            // btnComodos
+            // 
+            this.btnComodos.ButtonText = "Cômodos";
+            this.btnComodos.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
+            this.btnComodos.CheckedForeColor = System.Drawing.Color.White;
+            this.btnComodos.CheckedImageTint = System.Drawing.Color.White;
+            this.btnComodos.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
+            this.btnComodos.CustomDialogResult = System.Windows.Forms.DialogResult.None;
+            this.btnComodos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnComodos.HoverBackground = System.Drawing.Color.OldLace;
+            this.btnComodos.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.btnComodos.HoverImage = null;
+            this.btnComodos.HoverImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.btnComodos.HoverOutline = System.Drawing.Color.Empty;
+            this.btnComodos.Image = ((System.Drawing.Image)(resources.GetObject("btnComodos.Image")));
+            this.btnComodos.ImageAutoCenter = false;
+            this.btnComodos.ImageExpand = new System.Drawing.Point(0, 0);
+            this.btnComodos.ImageOffset = new System.Drawing.Point(15, 0);
+            this.btnComodos.ImageTint = System.Drawing.Color.White;
+            this.btnComodos.IsToggleButton = false;
+            this.btnComodos.IsToggled = false;
+            this.btnComodos.Location = new System.Drawing.Point(5, 329);
+            this.btnComodos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
+            this.btnComodos.Name = "btnComodos";
+            this.btnComodos.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
+            this.btnComodos.NormalForeColor = System.Drawing.Color.White;
+            this.btnComodos.NormalOutline = System.Drawing.Color.Empty;
+            this.btnComodos.OutlineThickness = 2F;
+            this.btnComodos.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
+            this.btnComodos.PressedForeColor = System.Drawing.Color.White;
+            this.btnComodos.PressedImageTint = System.Drawing.Color.White;
+            this.btnComodos.PressedOutline = System.Drawing.Color.Empty;
+            this.btnComodos.Rounding = new System.Windows.Forms.Padding(5);
+            this.btnComodos.Size = new System.Drawing.Size(216, 51);
+            this.btnComodos.TabIndex = 2;
+            this.btnComodos.TextAutoCenter = false;
+            this.btnComodos.TextOffset = new System.Drawing.Point(15, 0);
+            this.btnComodos.Click += new System.EventHandler(this.btnComodos_Click);
             // 
             // sataButton1
             // 
@@ -398,45 +437,6 @@
             this.btnFechar.UseVisualStyleBackColor = false;
             this.btnFechar.Click += new System.EventHandler(this.btnFechar_Click);
             // 
-            // btnComodos
-            // 
-            this.btnComodos.ButtonText = "Cômodos";
-            this.btnComodos.CheckedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
-            this.btnComodos.CheckedForeColor = System.Drawing.Color.White;
-            this.btnComodos.CheckedImageTint = System.Drawing.Color.White;
-            this.btnComodos.CheckedOutline = System.Drawing.Color.FromArgb(((int)(((byte)(16)))), ((int)(((byte)(22)))), ((int)(((byte)(27)))));
-            this.btnComodos.CustomDialogResult = System.Windows.Forms.DialogResult.None;
-            this.btnComodos.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnComodos.HoverBackground = System.Drawing.Color.OldLace;
-            this.btnComodos.HoverForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
-            this.btnComodos.HoverImage = null;
-            this.btnComodos.HoverImageTint = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
-            this.btnComodos.HoverOutline = System.Drawing.Color.Empty;
-            this.btnComodos.Image = ((System.Drawing.Image)(resources.GetObject("btnComodos.Image")));
-            this.btnComodos.ImageAutoCenter = false;
-            this.btnComodos.ImageExpand = new System.Drawing.Point(0, 0);
-            this.btnComodos.ImageOffset = new System.Drawing.Point(15, 0);
-            this.btnComodos.ImageTint = System.Drawing.Color.White;
-            this.btnComodos.IsToggleButton = false;
-            this.btnComodos.IsToggled = false;
-            this.btnComodos.Location = new System.Drawing.Point(5, 329);
-            this.btnComodos.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
-            this.btnComodos.Name = "btnComodos";
-            this.btnComodos.NormalBackground = System.Drawing.Color.FromArgb(((int)(((byte)(9)))), ((int)(((byte)(9)))), ((int)(((byte)(24)))));
-            this.btnComodos.NormalForeColor = System.Drawing.Color.White;
-            this.btnComodos.NormalOutline = System.Drawing.Color.Empty;
-            this.btnComodos.OutlineThickness = 2F;
-            this.btnComodos.PressedBackground = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(46)))), ((int)(((byte)(210)))));
-            this.btnComodos.PressedForeColor = System.Drawing.Color.White;
-            this.btnComodos.PressedImageTint = System.Drawing.Color.White;
-            this.btnComodos.PressedOutline = System.Drawing.Color.Empty;
-            this.btnComodos.Rounding = new System.Windows.Forms.Padding(5);
-            this.btnComodos.Size = new System.Drawing.Size(216, 51);
-            this.btnComodos.TabIndex = 2;
-            this.btnComodos.TextAutoCenter = false;
-            this.btnComodos.TextOffset = new System.Drawing.Point(15, 0);
-            this.btnComodos.Click += new System.EventHandler(this.btnComodos_Click);
-            // 
             // Form1
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -464,7 +464,7 @@
         private System.Windows.Forms.Timer sidebarTimer;
         private System.Windows.Forms.Panel panelSidebar;
         private System.Windows.Forms.Label label1;
-        private FrameworkTest.SATAButton btnGastos;
+        private FrameworkTest.SATAButton btnRanking;
         private FrameworkTest.SATAButton btnSeguranca;
         private FrameworkTest.SATAButton btnDashboard;
         private FrameworkTest.SATAButton btnConfig;

@@ -95,10 +95,6 @@ namespace Dashboard_Smart_Cities_Final.UserControls
             }
         }
 
-        // O erro CS0103 ocorre porque "satacomboBoxAmbientes" não existe no contexto atual.
-        // O nome correto do controle, conforme o restante do código, é "comboBoxAmbientes".
-        // Para corrigir, altere "satacomboBoxAmbientes" para "comboBoxAmbientes" na propriedade AmbienteAtual:
-
         private string AmbienteAtual
         {
             get

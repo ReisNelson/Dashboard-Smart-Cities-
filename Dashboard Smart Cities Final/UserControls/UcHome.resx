@@ -120,12 +120,11 @@
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="sataSearchBox.Icon" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
-        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAP5JREFUSEvd
-        lIsNgzAMRBmhIzACozECG8AG7ShsAJu0G6R35IyiqhDzqVTxJKupc2eHBFJclxBCiWgRA8LgmLlSsn2g
-        QMdqGVrJtwHjGP0TbFRpinOVcsagKR8wmPmFmAt/wjlpSKf0OhByz43F4gY1UTqRPxOIbPW+FQFoH9Hi
-        8EBke59dvUFttDjOQsKgv25ky/uk+2mDI1s0KrUMREcOuVFqGYj2vqb8Hm5KrwOhPcUTkfvQqCG10j5g
-        SK8KXmxzI44Rd04k8AL0PYEBQ3rffIPbUiNsMbua8EzYKH0ijhvEVIy/ypHtTTywKOJ6TXqlzwWF2aRH
-        uG+Df6co3lAuIEek5LMxAAAAAElFTkSuQmCC
+        iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAABGdBTUEAALGPC/xhBQAAAN5JREFUSEvd
+        lNsVgjAQRCnBEiiB0iiBDrADLYUOoBPtYDyj2eM6PLIYf+T+kJN9zG4StqoOC4AaQA9gxBuuuVer/y4A
+        nF3SNXqNCwFgckko1DhbI+LjZ3QGF3z3iZUkRJ9nEWpfJJ25sZrcSCJG/k5c9bGKXjHXcIw7+2z1husi
+        fxfJEbqfIxwXdhTCcYVHNKltRuEld2qbUfBM+T+c1L6I6+K2JZKS04e0at9ERgUHm46Ki7MTDsBYB0Zg
+        2PFYWlfMVyK8Ewr5jrjuLBm/RSIRDisyqP0nJJFh64n/Hw9QLiBHpNEIugAAAABJRU5ErkJggg==
 </value>
   </data>
   <metadata name="sataEllipseControl1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">

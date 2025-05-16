@@ -11,7 +11,7 @@ namespace Consumo
     {
         public static void CalcConsumo()
         {
-            string connectionString = "server=127.0.0.1;port=3306;database=projeto12;uid=root;pwd=Janete10!;Allow User Variables=true;";
+            string connectionString = "server=127.0.0.1;port=3306;database=smartcities_db;uid=root;pwd=Enterprise2006;Allow User Variables=true;";
             Dictionary<int, double> consumoPorHora = new Dictionary<int, double>
         {
             { 1, 1.5 }, // Quarto 1

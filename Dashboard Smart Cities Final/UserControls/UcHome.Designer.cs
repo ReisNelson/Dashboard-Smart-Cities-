@@ -41,6 +41,8 @@ namespace Dashboard
             FrameworkTest.Charts.SATALineChart.DataSet dataSet4 = new FrameworkTest.Charts.SATALineChart.DataSet();
             FrameworkTest.Charts.SATALineChart.DataSet dataSet5 = new FrameworkTest.Charts.SATALineChart.DataSet();
             FrameworkTest.Charts.SATALineChart.DataSet dataSet6 = new FrameworkTest.Charts.SATALineChart.DataSet();
+            FrameworkTest.Charts.SATALineChart.DataSet dataSet7 = new FrameworkTest.Charts.SATALineChart.DataSet();
+            FrameworkTest.Charts.SATALineChart.DataSet dataSet8 = new FrameworkTest.Charts.SATALineChart.DataSet();
             this.sataPanelEconomia = new SATAUiFramework.SATAPanel();
             this.label4 = new System.Windows.Forms.Label();
             this.gsTxT = new SATAUiFramework.Controls.SATACircularProgress();
@@ -88,7 +90,7 @@ namespace Dashboard
             this.label4.ForeColor = System.Drawing.Color.LimeGreen;
             this.label4.Location = new System.Drawing.Point(151, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(55, 23);
+            this.label4.Size = new System.Drawing.Size(43, 17);
             this.label4.TabIndex = 11;
             this.label4.Text = "Gasto";
             this.label4.Click += new System.EventHandler(this.label4_Click);
@@ -120,7 +122,7 @@ namespace Dashboard
             this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.label5.Location = new System.Drawing.Point(191, 110);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(107, 23);
+            this.label5.Size = new System.Drawing.Size(85, 17);
             this.label5.TabIndex = 6;
             this.label5.Text = "essa semana";
             this.label5.Click += new System.EventHandler(this.labelSemanaAtual_Click);
@@ -153,7 +155,7 @@ namespace Dashboard
             this.sataSearchBox.PasswordChar = false;
             this.sataSearchBox.PlaceholderColor = System.Drawing.Color.White;
             this.sataSearchBox.PlaceholderText = "Pesquisar...";
-            this.sataSearchBox.Size = new System.Drawing.Size(250, 45);
+            this.sataSearchBox.Size = new System.Drawing.Size(250, 39);
             this.sataSearchBox.TabIndex = 2;
             this.sataSearchBox.Texts = "";
             this.sataSearchBox.UnderlinedStyle = false;
@@ -186,7 +188,7 @@ namespace Dashboard
             this.label1.ForeColor = System.Drawing.Color.LimeGreen;
             this.label1.Location = new System.Drawing.Point(152, 110);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(55, 23);
+            this.label1.Size = new System.Drawing.Size(43, 17);
             this.label1.TabIndex = 12;
             this.label1.Text = "Gasto";
             // 
@@ -217,7 +219,7 @@ namespace Dashboard
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(148)))), ((int)(((byte)(163)))), ((int)(((byte)(184)))));
             this.label2.Location = new System.Drawing.Point(192, 110);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(138, 23);
+            this.label2.Size = new System.Drawing.Size(108, 17);
             this.label2.TabIndex = 6;
             this.label2.Text = "semana passada";
             this.label2.Click += new System.EventHandler(this.labelSemanaAtual_Click);
@@ -245,9 +247,9 @@ namespace Dashboard
             this.sataPanel3.BorderThickness = 0;
             this.sataPanel3.Controls.Add(this.sataSearchBox);
             this.sataPanel3.Controls.Add(this.label6);
-            this.sataPanel3.Location = new System.Drawing.Point(0, 0);
+            this.sataPanel3.Location = new System.Drawing.Point(3, 3);
             this.sataPanel3.Name = "sataPanel3";
-            this.sataPanel3.Size = new System.Drawing.Size(1313, 76);
+            this.sataPanel3.Size = new System.Drawing.Size(1141, 76);
             this.sataPanel3.TabIndex = 11;
             // 
             // label6
@@ -333,12 +335,36 @@ namespace Dashboard
         110F,
         50F,
         40F};
+            dataSet7.Label = "Sample Dataset 1";
+            dataSet7.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
+            dataSet7.PointColor = System.Drawing.Color.FromArgb(((int)(((byte)(8)))), ((int)(((byte)(79)))), ((int)(((byte)(165)))));
+            dataSet7.Points = new float[] {
+        105F,
+        65F,
+        80F,
+        120F,
+        135F,
+        65F,
+        30F};
+            dataSet8.Label = "Sample Dataset 2";
+            dataSet8.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(1)))));
+            dataSet8.PointColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(160)))), ((int)(((byte)(1)))));
+            dataSet8.Points = new float[] {
+        80F,
+        90F,
+        70F,
+        100F,
+        110F,
+        50F,
+        40F};
             this.chartConsumo.DataSets.Add(dataSet1);
             this.chartConsumo.DataSets.Add(dataSet2);
             this.chartConsumo.DataSets.Add(dataSet3);
             this.chartConsumo.DataSets.Add(dataSet4);
             this.chartConsumo.DataSets.Add(dataSet5);
             this.chartConsumo.DataSets.Add(dataSet6);
+            this.chartConsumo.DataSets.Add(dataSet7);
+            this.chartConsumo.DataSets.Add(dataSet8);
             this.chartConsumo.DayColor = System.Drawing.Color.DarkGray;
             this.chartConsumo.Font = new System.Drawing.Font("Segoe UI", 9F);
             this.chartConsumo.ForeColor = System.Drawing.Color.White;
