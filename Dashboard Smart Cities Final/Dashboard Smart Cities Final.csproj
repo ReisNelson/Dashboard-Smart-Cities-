@@ -120,6 +120,12 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserControls\Controller\Consumo.cs" />
+    <Compile Include="UserControls\UcComodos.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcComodos.Designer.cs">
+      <DependentUpon>UcComodos.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UcConfiguracoes.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -144,17 +150,17 @@
     <Compile Include="UserControls\UcInformacoes.Designer.cs">
       <DependentUpon>UcInformacoes.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\UcMetas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\UcMetas.Designer.cs">
+      <DependentUpon>UcMetas.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UcRanking.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserControls\UcRanking.Designer.cs">
       <DependentUpon>UcRanking.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControls\UcSeguranca.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControls\UcSeguranca.Designer.cs">
-      <DependentUpon>UcSeguranca.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
@@ -181,11 +187,11 @@
     <EmbeddedResource Include="UserControls\UcHome.resx">
       <DependentUpon>UcHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\UcMetas.resx">
+      <DependentUpon>UcMetas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\UcRanking.resx">
       <DependentUpon>UcRanking.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControls\UcSeguranca.resx">
-      <DependentUpon>UcSeguranca.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">

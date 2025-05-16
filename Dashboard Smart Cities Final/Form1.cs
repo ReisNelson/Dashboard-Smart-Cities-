@@ -18,11 +18,11 @@ namespace Dashboard_Smart_Cities_Final
         private UcHome ucDashboard;
         private UcInformacoes ucInformacoes;
         private UcConfiguracoes ucConfiguracoes;
-        private UcSeguranca ucSeguranca;
         private UcRanking ucRanking;
-
         private UcControleAmbiente ucControleAmbiente;
         private UserControl currentUc;
+        private UserControl ucComodos;
+        private UserControl ucMetas;
 
         MySqlConnection conexao;
         public Form1()
@@ -53,9 +53,10 @@ namespace Dashboard_Smart_Cities_Final
             ucDashboard = new UcHome(conexao);
             ucInformacoes = new UcInformacoes(conexao);
             ucConfiguracoes = new UcConfiguracoes(conexao);
-            ucSeguranca = new UcSeguranca(conexao);
             ucControleAmbiente = new UcControleAmbiente(conexao);
             ucRanking = new UcRanking(conexao);
+            ucMetas = new UcMetas(conexao);
+            ucComodos = new UcComodos(conexao);
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -77,7 +78,6 @@ namespace Dashboard_Smart_Cities_Final
             btnDashboard.Text = mostrar ? "Dashboard" : "";
             btnInfo.Text = mostrar ? "Informações" : "";
             btnConfig.Text = mostrar ? "Configurações" : "";
-            btnSeguranca.Text = mostrar ? "Segurança" : "";
             btnRanking.Text = mostrar ? "Gastos" : "";
         }
 
@@ -145,11 +145,6 @@ namespace Dashboard_Smart_Cities_Final
             ExibirUserControl(ucConfiguracoes);
         }
 
-        private void BtnSeguranca_Click(object sender, EventArgs e)
-        {
-            ExibirUserControl(ucSeguranca);
-        }
-
         private void btnRanking_Click(object sender, EventArgs e)
         {
             ExibirUserControl(ucRanking);
@@ -162,7 +157,12 @@ namespace Dashboard_Smart_Cities_Final
 
         private void btnComodos_Click(object sender, EventArgs e)
         {
-            ExibirUserControl(ucControleAmbiente); // Corrigido para usar a instância ucControleAmbiente
+            ExibirUserControl(ucControleAmbiente); 
+        }
+
+        private void btnMetas_Click(object sender, EventArgs e)
+        {
+            ExibirUserControl(ucMetas); 
         }
 
         private void Form1_Resize(object sender, EventArgs e)

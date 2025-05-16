@@ -32,9 +32,10 @@
             // 
             // UcInformacoes
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
-            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(14)))), ((int)(((byte)(33)))));
             this.Name = "UcInformacoes";
+            this.Size = new System.Drawing.Size(1147, 779);
             this.Load += new System.EventHandler(this.UcInformacoes_Load);
             this.ResumeLayout(false);
 

@@ -1,6 +1,6 @@
 ﻿namespace Dashboard_Smart_Cities_Final.UserControls
 {
-    partial class UcSeguranca
+    partial class UcComodos
     {
         /// <summary> 
         /// Variável de designer necessária.
@@ -28,16 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // UcSeguranca
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Name = "UcSeguranca";
-            this.Load += new System.EventHandler(this.UcSeguranca_Load);
-            this.ResumeLayout(false);
-
         }
 
         #endregion
